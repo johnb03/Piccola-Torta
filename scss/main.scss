@@ -1,8 +1,13 @@
 @import "./ressets";
-@import "./variable";
+@import "./normalize";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+
+// font-family: 'Anton', sans-serif;
+// font-family: 'Bebas Neue', sans-serif;
 
 .contianer{
-    
+    width: 100%;
+    height: 100vh;
 
 }
 

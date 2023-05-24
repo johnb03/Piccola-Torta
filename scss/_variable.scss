@@ -1,0 +1,30 @@
+$primary-color: #1b7e7f;
+$secondary-color: #ffbd4a;
+$white-fortext: #f1f1f1;
+
+@mixin gradientBG {
+  background: linear-gradient(
+    135.05deg,
+    #124b39 0%,
+    #1b7e7f 0.32%,
+    #115c5c 18.08%,
+    #124f50 38.69%,
+    #124848 44.49%,
+    #0d3e3f 61.63%,
+    #0c3a3a 78.21%
+  );
+}
+
+@mixin grandientFooter {
+  background: linear-gradient(
+    180deg,
+    #115c5c 0%,
+    rgba(14, 77, 78, 0.5) 56.92%,
+    rgba(20, 107, 108, 0) 113.54%,
+    rgba(23, 111, 112, 0.28125) 113.54%
+  );
+}
+
+@mixin bgs__Ayuda{
+    background: rgba(4, 4, 4, 0.75);
+}
