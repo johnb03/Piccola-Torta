@@ -1,0 +1,11 @@
+@media screen and (min-width: 48em){
+   section.banner{
+    flex-direction: row;
+    .banner-left{
+        height: 100%;
+    }
+    .logo{
+        width: 80%;
+    }
+   }
+}

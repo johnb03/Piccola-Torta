@@ -1,14 +1,21 @@
 $primary-color: #1b7e7f;
 $secondary-color: #ffbd4a;
 $white-fortext: #f1f1f1;
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
 
-html{
-  font-family: 'Anton', sans-serif;
+html {
+  font-family: "Anton", sans-serif;
+  color: $white-fortext;
 }
-a,ul{
+
+a,
+ul {
   text-decoration: none;
   list-style: none;
+}
+
+p {
+  font-family: "Bebas Neue", sans-serif;
 }
 @mixin gradientBG {
   background: linear-gradient(
@@ -33,17 +40,24 @@ a,ul{
   );
 }
 
-@mixin bgs__Ayuda{
-    background: rgba(4, 4, 4, 0.75);
+@mixin bgs__Ayuda {
+  background: rgba(4, 4, 4, 0.75);
 }
 
+@mixin shadowAnat {
+  filter: drop-shadow(21.4678px 56.028px 80px rgba(0, 0, 0, 0.18))
+    drop-shadow(13.9143px 36.3144px 46.8519px rgba(0, 0, 0, 0.136667))
+    drop-shadow(8.26907px 21.5812px 25.4815px rgba(0, 0, 0, 0.109333))
+    drop-shadow(4.29355px 11.2056px 13px rgba(0, 0, 0, 0.09))
+    drop-shadow(1.74923px 4.56524px 6.51852px rgba(0, 0, 0, 0.0706667))
+    drop-shadow(0.397551px 1.03756px 3.14815px rgba(0, 0, 0, 0.0433333));
+}
 
 //grid artesanal
 //smart phone
 @media screen and (min-width: 24.375em) {
   .col-s-1 {
     width: 8.333333333333333%;
-    background-color: #0c3a3a;
   }
   .col-s-2 {
     width: 16.66666666666667%;
@@ -235,5 +249,3 @@ a,ul{
     width: 100%;
   }
 }
-
-

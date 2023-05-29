@@ -6,12 +6,12 @@
 .main-nav{
 width: 99%;
 height: 4rem;
-margin: 0 auto;
-padding:0 5px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items:center;
+
+
 
 
 }
@@ -29,8 +29,8 @@ align-items:center;
   justify-content: center;
   padding: 0;
   visibility: hidden;
-  left: 350px;
   
+
 }
 
 
@@ -52,7 +52,7 @@ align-items:center;
   display: block;
   width: 34px;
   height: 3px;
-margin-right: 9px;
+margin-right: .4rem;
   background-color: #ffff;
   border-radius: 3px;
  
@@ -90,6 +90,7 @@ transform: scale(0.9);
 
 .ham{
   // display: none;
+
 }
 
 .toggle{
@@ -103,9 +104,11 @@ width:100% ;
   text-align: center;
   gap: 2rem;
   transition: all 400ms ease-in-out ;
+
 }
 .toggle .list__link{
   font-size: 1.5rem;
   padding: 2px 20px;
   border-radius: 15px;
+
 }

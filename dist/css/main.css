@@ -2,17 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
 html {
   font-family: "Anton", sans-serif;
+  color: #f1f1f1;
 }
 
-a, ul {
+a,
+ul {
   text-decoration: none;
   list-style: none;
+}
+
+p {
+  font-family: "Bebas Neue", sans-serif;
 }
 
 @media screen and (min-width: 24.375em) {
   .col-s-1 {
     width: 8.3333333333%;
-    background-color: #0c3a3a;
   }
   .col-s-2 {
     width: 16.6666666667%;
@@ -203,17 +208,22 @@ a, ul {
 }
 html {
   font-family: "Anton", sans-serif;
+  color: #f1f1f1;
 }
 
-a, ul {
+a,
+ul {
   text-decoration: none;
   list-style: none;
+}
+
+p {
+  font-family: "Bebas Neue", sans-serif;
 }
 
 @media screen and (min-width: 24.375em) {
   .col-s-1 {
     width: 8.3333333333%;
-    background-color: #0c3a3a;
   }
   .col-s-2 {
     width: 16.6666666667%;
@@ -405,8 +415,6 @@ a, ul {
 .main-nav {
   width: 99%;
   height: 4rem;
-  margin: 0 auto;
-  padding: 0 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -426,7 +434,6 @@ a, ul {
   justify-content: center;
   padding: 0;
   visibility: hidden;
-  left: 350px;
 }
 
 .list__link {
@@ -445,7 +452,7 @@ a, ul {
   display: block;
   width: 34px;
   height: 3px;
-  margin-right: 9px;
+  margin-right: 0.4rem;
   background-color: white;
   border-radius: 3px;
 }
@@ -809,6 +816,17 @@ template {
   display: none;
 }
 
+@media screen and (min-width: 48em) {
+  section.banner {
+    flex-direction: row;
+  }
+  section.banner .banner-left {
+    height: 100%;
+  }
+  section.banner .logo {
+    width: 80%;
+  }
+}
 .container {
   width: 100%;
   background: linear-gradient(135.05deg, #124b39 0%, #1b7e7f 0.32%, #115c5c 18.08%, #124f50 38.69%, #124848 44.49%, #0d3e3f 61.63%, #0c3a3a 78.21%);
@@ -819,11 +837,117 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.banner-left {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.banner-left .logo {
+  width: 40%;
+  height: auto;
+}
+.banner-left .title {
+  font-weight: lighter;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+.banner-left .cta {
+  align-self: flex-end;
+  border-radius: 5px;
+  padding: 3px 8px;
+  background-color: #ffbd4a;
+}
+.banner-left .cta a {
+  color: #000;
 }
 
 .banner-rigth .banner__img {
   width: 100%;
   height: auto;
-  display: none;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffbd4a;
+  color: #000;
+}
+
+.about__left {
+  text-align: center;
+}
+
+.about__right {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.abaut__img {
+  width: 60%;
+  height: auto;
+  padding-top: 3rem;
+}
+
+.card__copy .title__copy {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.card__copy .copy__about {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 0 10px;
+}
+.card__copy .cta {
+  border-radius: 5px;
+  padding: 3px 8px;
+  background-color: #1b7e7f;
+}
+.card__copy .cta a {
+  color: #f1f1f1;
+  letter-spacing: 1.5px;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.productos__image {
+  padding: 0 10px;
+}
+.productos__image .anatomia {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(21.4678px 56.028px 80px rgba(0, 0, 0, 0.18)) drop-shadow(13.9143px 36.3144px 46.8519px rgba(0, 0, 0, 0.136667)) drop-shadow(8.26907px 21.5812px 25.4815px rgba(0, 0, 0, 0.109333)) drop-shadow(4.29355px 11.2056px 13px rgba(0, 0, 0, 0.09)) drop-shadow(1.74923px 4.56524px 6.51852px rgba(0, 0, 0, 0.0706667)) drop-shadow(0.397551px 1.03756px 3.14815px rgba(0, 0, 0, 0.0433333));
+}
+
+.productos__copy {
+  padding: 10px;
+}
+.productos__copy .productos__title {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.productos__copy .productos__text {
+  font-size: 1.3rem;
+}
+
+.ayuda {
+  padding: 10px;
+}
+
+.ayuda__title {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }/*# sourceMappingURL=main.css.map */
