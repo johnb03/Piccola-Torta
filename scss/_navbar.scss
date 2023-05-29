@@ -1,0 +1,111 @@
+@import "./variable";
+
+
+
+
+.main-nav{
+width: 99%;
+height: 4rem;
+margin: 0 auto;
+padding:0 5px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items:center;
+
+
+}
+
+.icon-nav{
+  width: 45px;
+}
+
+.nav-menu{
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  visibility: hidden;
+  left: 350px;
+  
+}
+
+
+    .list__link{
+      color: $white-fortext;
+      text-shadow: 3px 5px 12px rgba(0, 0,0,5)
+    }
+
+    .list__link:hover{
+      background-color: $secondary-color;
+      transition: all 300ms ease-in-out;
+      color: $primary-color;
+      text-shadow: none;
+    }
+ 
+
+.ham {
+
+  display: block;
+  width: 34px;
+  height: 3px;
+margin-right: 9px;
+  background-color: #ffff;
+  border-radius: 3px;
+ 
+}
+
+.ham::after {
+  content: "";
+  position: relative;
+  bottom: 11px;
+  display: block;
+  width: 34px;
+  height: 3px;
+  background-color: #ffff;
+  border-radius: 3px;
+}
+.ham::before {
+  content: "";
+  position: relative;
+  top: 8px;
+  display: block;
+  width: 34px;
+  height: 3px;
+  background-color: #ffff;
+  border-radius: 3px;
+}
+
+.ham:hover{
+  cursor: pointer;
+}
+
+.ham:active{
+transform: scale(0.9);
+
+}
+
+.ham{
+  // display: none;
+}
+
+.toggle{
+  visibility: visible;
+  top: 4rem;
+ right: 3px;
+ left: 0;
+width:100% ;
+ height: calc(100% - 64px);
+  @include gradientBG;
+  text-align: center;
+  gap: 2rem;
+  transition: all 400ms ease-in-out ;
+}
+.toggle .list__link{
+  font-size: 1.5rem;
+  padding: 2px 20px;
+  border-radius: 15px;
+}

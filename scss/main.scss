@@ -1,30 +1,45 @@
-@import "./ressets";
+@import "./variable";
+@import "./navbar";
 @import "./normalize";
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 
-// font-family: 'Anton', sans-serif;
+
+
 // font-family: 'Bebas Neue', sans-serif;
 
-.contianer{
+.container{
     width: 100%;
-    height: 100vh;
+    @include gradientBG;
+    margin: 0 auto;
 
 }
 
-.banner{}
+
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+   
+}
 .banner-left{
+    // width: 320px;
  .title{}
-.logo{}
+
 .cta{}
 }
 
 
-.main-nav{}
-.list{}
+.banner-rigth{
+    // width: 320px;
 
- .list__item{
-    .list__link{}
- }  
+    .banner__img{
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+}
+
 
  .card__copy{
     .title__copy{}
