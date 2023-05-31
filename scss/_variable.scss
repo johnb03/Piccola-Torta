@@ -6,8 +6,19 @@ $white-fortext: #f1f1f1;
 html {
   font-family: "Anton", sans-serif;
   color: $white-fortext;
+  scroll-snap-type: y  mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+ 
 }
 
+section{
+  scroll-snap-align:start;
+}
+
+h2,h3{
+  font-weight: 400;
+}
 a,
 ul {
   text-decoration: none;
@@ -16,6 +27,9 @@ ul {
 
 p {
   font-family: "Bebas Neue", sans-serif;
+}
+button{
+  cursor: pointer;
 }
 @mixin gradientBG {
   background: linear-gradient(
