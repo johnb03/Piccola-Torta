@@ -38,7 +38,8 @@ scroll-snap-align:start;
 
     .list__link{
       color: $white-fortext;
-      text-shadow: 3px 5px 12px rgba(0, 0,0,5)
+      @include textShadows;
+      font-family: sans-serif;
     }
 
     .list__link:hover{
@@ -46,6 +47,8 @@ scroll-snap-align:start;
       transition: all 300ms ease-in-out;
       color: $primary-color;
       text-shadow: none;
+      cursor: pointer;
+     
     }
  
 
@@ -90,10 +93,6 @@ transform: scale(0.9);
 
 }
 
-.ham{
-  // display: none;
-
-}
 
 .toggle{
   visibility: visible;
@@ -113,4 +112,36 @@ width:100% ;
   padding: 2px 20px;
   border-radius: 15px;
 
+}
+//media pc
+@media screen and (min-width: 90em){
+  .nav-menu{
+    visibility: visible;
+    left: 75%;
+    top: 19%;;
+    gap: 1rem;
+    z-index: 10;
+
+    .list__item {
+      
+      a{
+        padding: 3px 13px;
+        border-radius: 8px;
+        
+        
+        font-size: 1.3rem;
+        letter-spacing: 1.8px;
+      }
+
+      
+    }
+
+   
+
+    
+  }
+  .ham{
+    display: none;
+  
+  }
 }
