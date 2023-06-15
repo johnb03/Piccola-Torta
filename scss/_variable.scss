@@ -12,7 +12,9 @@ html {
 overflow-x: hidden;
  
 }
-
+body{
+  scroll-behavior: smooth;
+}
 section{
   scroll-snap-align:start;
 }

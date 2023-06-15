@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
 html {
   font-family: "Anton", sans-serif;
   color: #f1f1f1;
@@ -7,6 +8,10 @@ html {
   overflow-y: scroll;
   height: 100vh;
   overflow-x: hidden;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 section {
@@ -38,6 +43,10 @@ html {
   overflow-y: scroll;
   height: 100vh;
   overflow-x: hidden;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 section {
@@ -612,6 +621,41 @@ template {
     border-bottom: 0.1px;
   }
 }
+html {
+  font-family: "Anton", sans-serif;
+  color: #f1f1f1;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+h2, h3 {
+  font-weight: 400;
+}
+
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+p {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
 .container {
   background: linear-gradient(135.05deg, #124b39 0%, #1b7e7f 0.32%, #115c5c 18.08%, #124f50 38.69%, #124848 44.49%, #0d3e3f 61.63%, #0c3a3a 78.21%);
 }
