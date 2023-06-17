@@ -12,12 +12,13 @@
 </head>
 <style>
     body {
-        background-color: #000;
+        background-color: #f1f1f1;
+        color: black;
     }
 </style>
 
 <body>
-<div class="container__2 ">
+    <div class="container__2 ">
         <!-- <nav class="main-nav">
             <img   src="/assets/logo.ico.svg" alt="logo-piccola" class="icon-nav">
             <ul class="nav-menu  nav-menu__cot">
@@ -48,7 +49,7 @@
             </div>
 
             <div class="block__right">
-                <img class="block__img" src="/assets/bg-bannser 1.png" alt="foods">
+                <!-- <img class="block__img" src="/assets/bg-bannser 1.png" alt="foods"> -->
             </div>
 
         </section>
@@ -59,10 +60,10 @@
                 <form action="" class="form">
 
                     <label for="cPerson" class="label__form">Cuantas personas?</label>
-                    <input type="number" name="cPerson" id="cPerson" class="form__input "  required>
+                    <input type="number" name="cPerson" id="cPerson" class="form__input " required>
 
                     <label for="uPerson" class="label__form">Unidades por personas?</label>
-                    <input type="number" name="uPerson" id="uPerson" class="form__input "  required>
+                    <input type="number" name="uPerson" id="uPerson" class="form__input " required>
 
                     <label for="pBand" class="label__form">Platos o bandejas?</label>
                     <select name="pBand" id="pBand">
@@ -70,72 +71,143 @@
                         <option value="platos personalizados">platos personalizados</option>
                         <option value="bandejas para mesas decoradas">bandejas para mesas decoradas</option>
                     </select required>
-                    
+
                 </form>
 
                 <div class="buttons">
-                    <button  onclick="window.location.href='#cotizacion-app '; "  class="btn__back"><iconify-icon icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
-                    <button onclick="window.location.href='#hot-food '; "class="btn__next">Next <iconify-icon icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
+                    <button onclick="window.location.href='#cotizacion-app '; " class="btn__back"><iconify-icon
+                            icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
+                    <button onclick="window.location.href='#hot-food '; " class="btn__next">Next <iconify-icon
+                            icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
                 </div>
             </div>
+            <!-- picadera acliente -->
+            <section class="hot__food" id="hot-food">
 
-            <div class="hot__food" id="hot-food">
-
-                <h2 class="hot__title">Selecciona las <span class="color__orange">Las calientes</span></h2>
+                <h2 class="food__title">Selecciona las <span class="color__orange">Las calientes</span></h2>
 
                 <div class="hot__cards">
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">Quipe de pollo</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">Quipe de res</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">Quipe de ques</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">pastelitos de pollo</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">pastelitos de queso</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">pastelitos de res molida</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">pastelitos de queso y puerro</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">Croquetas de pollo</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">corquetas de bacalao</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title">Tarticos de pizza</h4>
                     </div>
                     <div class="hot__card">
-                        <img src="#" alt="" class="hot__img">
+                        <button><img src="#" alt="" class="hot__img"></button>
                         <h4 class="hot__card--title"></h4>
                     </div>
                 </div>
                 <div class="buttons">
-                    <button  onclick="window.location.href='#opciones '; "  class="btn__back"><iconify-icon icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
-                    <button onclick="window.location.href='# '; "class="btn__next">Next <iconify-icon icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
+                    <button onclick="window.location.href='#opciones '; " class="btn__back"><iconify-icon
+                            icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
+                    <button onclick="window.location.href='#cool-food'; " class="btn__next">Next <iconify-icon
+                            icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
                 </div>
 
-            </div>
+            </section>
 
-        </section>
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+            <!-- picadera fria -->
+            <section class="cool__food" id="cool-food">
+
+                <h2 class="food__title">Selecciona las <span class="color__orange">Las frias</span></h2>
+
+                <div class="cool__cards">
+                    <div class="cool__card">
+                        <img src="#" alt="" class="cool__img">
+                        <h4 class="cool__card--title">wraps de queso y jamon</h4>
+                    </div>
+                    <div class="cool__card">
+                        <img src="#" alt="" class="cool__img">
+                        <h4 class="cool__card--title">Mini sandwich</h4>
+                    </div>
+                    <div class="cool__card">
+                        <img src="#" alt="" class="cool__img">
+                        <h4 class="cool__card--title">Envoltinis de queso y jamon</h4>
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <button onclick="window.location.href='#hot-food '; " class="btn__back"><iconify-icon
+                            icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
+                    <button onclick="window.location.href='#confirmacion '; " class="btn__next">Next <iconify-icon
+                            icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
+                </div>
+
+            </section>
+            <!-- confirmacion -->
+            <section class="confirmacion" id="block-confirm">
+                <h2 class="conf__h2">Felicidades</h2>
+                <h3 class="conf__h3">has creado tu presupuesto</h3>
+
+                <div class="block__config-1">
+                    <div class="block__copy">
+                        <p class="conf-1__copy"></p>
+                        <p class="number">10</p>
+                    </div>
+
+                    <div class="block__config-2">
+                        <div class="block__copy--1">
+                            <p class="conf-1__copy"></p>
+                        </div>
+
+                        <div class="block__config--2">
+                            <p class="number">10</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="buttons">
+                        <button onclick="window.location.href='#hot-food '; " class="btn__back"><iconify-icon
+                                icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
+                        <button onclick="window.location.href='#thanks '; " class="btn__next">Next <iconify-icon
+                                icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
+                    </div>
+
+            </section>
+            <secion id="thanks" class="thx">
+                <h2 class="thx__h2">Gracias</h2>
+                <a href=""></a>
+                <p class="thx__copy">Su presupuesto se ah enviado correctamente</p>
+                <p class="thx__copy">nos contactaremos contigo lo mas proto posible</p>
+            </secion>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
 </html>
