@@ -1,8 +1,17 @@
-//elegir las etiquetas
-const hamButton = document.querySelector(".ham");
-const navMenu = document.querySelector(".nav-menu");
 
-//luego crear la funcion toogle y insertar
+ function menuBar (){
+
+    //elegir las etiquetas
+     const hamButton = document.querySelector(".ham");
+     const navMenu = document.querySelector(".nav-menu");
+    
+    //luego crear la funcion toogle y insertar
+
+
 hamButton.addEventListener('click', () =>{
  navMenu.classList.toggle('toggle');
 })
+
+}
+
+export{menuBar};

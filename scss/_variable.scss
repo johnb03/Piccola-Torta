@@ -7,13 +7,13 @@ html {
   font-family: "Anton", sans-serif;
   color: $white-fortext;
   scroll-snap-type: y  mandatory;
-  overflow-y: scroll;
+  overflow-y: smooth;  
   height: 100vh;
-overflow-x: hidden;
- 
+  
 }
 body{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 section{
   scroll-snap-align:start;
@@ -33,6 +33,19 @@ p {
 }
 button{
   cursor: pointer;
+}
+
+@mixin neoP{
+  border-radius: 50px;
+background: #ffbd4a;
+box-shadow:  4px 4px 7px #b08233,
+             -4px -4px 7px #fff861;
+}
+@mixin neoC{
+border-radius: 50px;
+background: #ffbd4a;
+box-shadow:  13px 13px 37px #bd8c37,
+             -13px -13px 37px #ffee5d;
 }
 
 @mixin textShadows{

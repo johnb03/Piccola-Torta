@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="stylesheet" href="/dist/css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/index.js" defer type="module"></script>
+    <script defer src="/js/index.js" type="module"></script>
+    <script defer src="/js/carrousel.js"></script>
+
+
+
     <title>Piccola Torta</title>
 </head>
+
 <body>
-    <div class="container " >
+    <div class="container ">
         <nav class="main-nav">
-            <img   src="/assets/logo.ico.svg" alt="logo-piccola" class="icon-nav">
+            <img src="/assets/logo.ico.svg" alt="logo-piccola" class="icon-nav">
             <ul class="nav-menu  ">
                 <li class="list__item"><a href="#acercaDe" class="list__link">Acerca de</a></li>
                 <li class="list__item"><a href="#serviCios" class="list__link">servicios</a></li>
-                <li class="list__item"><a href="https://wa.me/18497015300" target="_blank"class="list__link">Contacto</a></li>
+                <li class="list__item"><a href="https://wa.me/18497015300" target="_blank"
+                        class="list__link">Contacto</a></li>
             </ul>
             <span class="ham"></span>
         </nav>
-        <section  class="banner   ">
+        <section class="banner   ">
             <article class="banner-left  ">
                 <img class="logo" src="/assets/Logo - prueba 1.svg" alt="">
                 <h1 class="title">Productos frescos y deliciosos todos los dias</h1>
-                <button class="cta" ><a href="#">Cotizar</a></button>
+                <button class="cta"><a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización." target="_blank">Cotizar</a></button>
             </article>
             <article class="banner-rigth">
-                <img  class="banner__img" src="/assets/bg-bannser 1.png" alt="platos">
+                <img class="banner__img" src="/assets/bg-bannser 1.png" alt="platos">
             </article>
         </section>
         <section id="acercaDe" class="about  ">
@@ -37,80 +44,93 @@
             <arctticle class="about__right ">
                 <div class="card__copy">
                     <h2 class="title__copy">Quienes somos?</h2>
-                    <p class="copy__about">Somos una empresa dedicada a ofrecer preparaciones frescas y deliciosas diariamente. Nos enfocamos en la calidad de nuestros ingredientes y en la preparación artesanal de nuestros productos para ofrecerte la mejor experiencia culinaria.
+                    <p class="copy__about">Somos una empresa dedicada a ofrecer preparaciones frescas y deliciosas
+                        diariamente. Nos enfocamos en la calidad de nuestros ingredientes y en la preparación artesanal
+                        de nuestros productos para ofrecerte la mejor experiencia culinaria.
                     </p>
                 </div>
                 <div class="card__copy">
                     <p class="copy__about copy-r"> Realiza tu pedido ahora
                         No esperes más para disfrutar de nuestros productos frescos</p>
-                        <button class="cta"><a href="#">Te ayudamos?</a></button>
+                    <button class="cta"><a href="#">Te ayudamos?</a></button>
                 </div>
             </arctticle>
         </section>
 
         <section class="productos">
-            
+
             <article class="productos__image">
                 <img class="anatomia" src="/assets/Anatomia.png" alt="pastelito definicion">
             </article>
 
             <article class="productos__copy">
                 <h2 class="productos__title">nuestros productos</h2>
-                <p class="productos__text">Ofrecemos una variedad de productos frescos que son preparados diariamente </p>
-                <p class="productos__text "><span>entre ellos se encuentran:</span> quipes, empanadas, croquetas do pollo o bacalao, mini-wrap, tarticos, etc...</p>
-                <p class="productos__text">todos ellos hechos con los ingredientes más frescos del mercado y con una gran atención en los detalles de la preparación.</p>
+                <p class="productos__text">Ofrecemos una variedad de productos frescos que son preparados diariamente
+                </p>
+                <p class="productos__text "><span>entre ellos se encuentran:</span> quipes, empanadas, croquetas de
+                    pollo o bacalao, mini-wrap, tarticos, etc...</p>
+                <p class="productos__text">todos ellos hechos con los ingredientes más frescos del mercado y con una
+                    gran atención en los detalles de la preparación.</p>
             </article>
         </section>
 
-        <section id="serviCios" class="ayuda">
-            <div class="ayuda__bg"></div>
+        <section id="serviCios" class="ayuda ">
+            <!-- <div class="ayuda__bg"></div> -->
 
             <h2 class="ayuda__title">
                 Cómo podemos ayudarte?
             </h2>
 
-            <div class="cards-ayuda">
-                <div class="card__ayuda ">
-                    <img class="card__image card-1">
-                    <p class="card__text">¿Tienes una actividad próxima cercana? </p>
+            <div class="carrousel ">
+                <div class="c__grande">
+                    <img src="/assets/image-1.png" alt="image-1" class="c__image">
+                    <!-- <blockquote class="card__text">¿Tienes una actividad próxima cercana? </blockquote> -->
+                    <img src="/assets/image-2.png" alt="image-2" class="c__image">
+                    <!-- <blockquote class="card__text"> ¿o necesitas alimentos frescos y deliciosos para tus invitados? </blockquote> -->
+                    <img src="/assets/image-3.png" alt="image-3" class="c__image">
+                    <!-- <blockquote class="card__text">¿O simplemente quieres disfrutar de  productos frescos en casa?     </blockquote> -->
+                    <img src="/assets/image-4.png" alt="image-4" class="c__image">
                 </div>
 
-                <div class="card__ayuda">
-                    <img  class="card__image card-2" >
-                    <p class="card__text"> ¿o necesitas alimentos frescos y deliciosos para tus invitados? </p>
-                </div>
-                
-                <div class="card__ayuda">
-                    <img  class="card__image card-3" >
-                    <p class="card__text">¿O simplemente quieres disfrutar de  productos frescos en casa?     </p>
-                </div>
 
             </div>
+            <ul class="puntos">
+                <li class="punto activo"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
+            </ul>
+
         </section>
 
-        <footer class="footer" >
+        <footer class="footer">
             <img src="/assets/Logo - footer.png" alt="" class="footer__logo">
             <div class="footer-addres">
                 <h3 class="address__title">Donde estamos.</h3>
-                <p class="address__text"><a href="#">Calle fausto ceja rodriguez  , km12 los frailes II , santo Domingo este</a></p>
+                <p class="address__text"><a
+                        href="https://www.google.com/maps/place/Picco-la-Torta/@18.4663303,-69.8016158,16.5z/data=!4m16!1m9!3m8!1s0x8eaf87c9fd350421:0x62332baf859afc7b!2sPicco-la-Torta!8m2!3d18.4666435!4d-69.7979832!9m1!1b1!16s%2Fg%2F11fwd7cyk0!3m5!1s0x8eaf87c9fd350421:0x62332baf859afc7b!8m2!3d18.4666435!4d-69.7979832!16s%2Fg%2F11fwd7cyk0?entry=ttu"
+                        target="_blank">Calle fausto ceja rodriguez , km12 los frailes II , santo Domingo este</a></p>
             </div>
             <div class="footer-redes">
                 <h3 class="redes__title">Follow us </h3>
                 <div class="redes__images">
-                    <a href="#">  <img src="/assets/uim_instagram-alt.svg" alt="instagram"></a>
-                    <a href="#"><img src="/assets/ic_baseline-tiktok.svg" alt="tiktok"></a>
-                    <a href="#"><img src="/assets/ic_baseline-facebook.svg" alt="facebook"></a>
+                    <a href="https://instagram.com/picco_la_torta?igshid=MzNlNGNkZWQ4Mg==" target="_blank"> <img
+                            src="/assets/uim_instagram-alt.svg" alt="instagram"></a>
+                    <a href="https://www.tiktok.com/@piccolatorta" target="_blank"><img
+                            src="/assets/ic_baseline-tiktok.svg" alt="tiktok"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100054711582534" target="_blank"><img
+                            src="/assets/ic_baseline-facebook.svg" alt="facebook"></a>
                 </div>
             </div>
             <spam class="line-footer"></spam>
             <div class="footer__R">
                 <a href="#acercaDe">ABOUT US </a>
-                <a href="">COTIZACIONES</a>
-                <a href="https://wa.me/18497015300" target="">CONTACTO</a>
+                <a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización." target="_blank">COTIZACIONES</a>
+                <a href="https://wa.me/18497015300" target="_blank">CONTACTO</a>
             </div>
         </footer>
         <p class="firma"> <span>Piccola-torta</span> todos los derechos reservados <span>&copy;</span></p>
-    </div>         
+    </div>
 </body>
-<script src="/js/nav-bar.js"></script>
+
 </html>

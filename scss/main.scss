@@ -1,8 +1,4 @@
-@import "./variable";
-@import "./navbar";
-@import "./normalize";
-@import "./media";
-@import "./cotizacion";
+@import "./variable", "./navbar", "./normalize","./media","./cotizacion";
 
 
 // font-family: 'Bebas Neue', sans-serif;
@@ -146,76 +142,85 @@
   }
 }
 
-.ayuda {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-}
-.ayuda__bg {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+// ------- ayuda section
 
-  background-image: url(/assets/bg-ayuda.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.2);
-}
-.ayuda__title {
-  position: relative;
-  font-size: 1.3rem;
-  letter-spacing: 2px;
-  @include textShadows;
-}
-
-.cards-ayuda {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: center;
+.ayuda{
+  height: 99vh;
+  background: $secondary-color;
   text-align: center;
-  gap: 1rem;
 
-  .card__ayuda {
-    width: clamp(280px, 60vw, 200px);
-    height: clamp(180px, 40vh, 600px);
 
-    display: flex;
-    flex-direction: column;
-
-    .card__image {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .card__text {
-      @include textShadows;
-    }
-    .card-1 {
-      background-image: url(/assets/image-1.jpg);
-    }
-
-    .card-2 {
-      background-image: url(/assets/image-2.jpg);
-    }
-    .card-3 {
-      background-image: url(/assets/image-3.jpg);
-    }
-    .card-1,
-    .card-2,
-    .card-3 {
-      @include boxShadowCard;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  .ayuda__title{
+    font-size: clamp(1.1rem, 10vw, 3rem);
+    padding-top: 20px;
+    @include textShadows;
   }
+
+.carrousel{
+  width: 90%;
+  max-width: 60em;
+
+  margin: 0 auto;
+  @include neoC;
+  overflow-x: hidden;
+ 
+  
+  
 }
+.c__grande{
+  width: 400%;
+  height: 48.7vh;
+  overflow: hidden;
+  border-radius: 20px;
+  
+
+  
+  
+
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  
+
+
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+
+.c__image{
+  width: calc(100% / 4);
+  height: inherit;
+  object-fit: cover;
+}
+
+.puntos{
+  width: inherit;
+  margin: 1em 0 0 ;
+  padding: 4em;
+  display: flex;
+  flex-flow:row  nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+
+}
+.punto{
+  width: 2em;
+  height: 2em;
+  margin:  1em 1m  0;
+  border-radius: 100%;
+  
+  @include neoP;
+}
+
+.punto.activo{
+  background-color: $primary-color;
+}
+}
+
+
 
 .footer {
   width: 90%;

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/js/nav-bar.js"></script>
+    <!-- <script defer src="/js/nav-bar.js"></script> -->
     <script src="/js/index.js" defer></script>
     <title>Piccola Torta</title>
 </head>
@@ -31,40 +31,42 @@
         <section id="cotizacion-app" class="cotizacion">
             <div class="block__left">
                 <h1>Organiza tu presupuesto</h1>
-                <form action="" class="form">
+                <!-- <form action="" class="form">
                     <label for="Nombre" class="label__form">Nombre</label>
                     <input type="text" name="Nombre" id="name" class="form__input " required>
-
+                    
                     <label for="email" class="label__form">Correo</label>
                     <input type="email" name="email" id="email" class="form__input" required>
-
+                    
                     <label for="phone" class="label__form">Telefono</label>
                     <input type="tel" name="phone" id="phone" class="form__input" maxlength="12" minlength="12"
-                        size="12 " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder=" xxx - xxx - xxx" required>
+                    size="12 " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder=" xxx - xxx - xxx" required>
+                    
+                    
+                    <input type="submit" value="Siguiente" target=" _self" onclick="entradaDedatos()"> -->
 
-
-                    <input type="submit" value="Siguiente" target=" _self">
-
+                    
+                    
                 </form>
             </div>
-
+            
             <div class="block__right">
                 <!-- <img class="block__img" src="/assets/bg-bannser 1.png" alt="foods"> -->
             </div>
-
+            
         </section>
-
+        
         <section class="opcions" id="opciones">
             <div class="block__opcion">
                 <h2 class="opcion__h2">Elige las opciones <span class="color__orange">Adecuadas</span>para ti</h2>
-                <form action="" class="form">
-
+                <form action="#"  id="formid"  class="form">
+                    
                     <label for="cPerson" class="label__form">Cuantas personas?</label>
                     <input type="number" name="cPerson" id="cPerson" class="form__input " required>
-
+                    
                     <label for="uPerson" class="label__form">Unidades por personas?</label>
                     <input type="number" name="uPerson" id="uPerson" class="form__input " required>
-
+                    
                     <label for="pBand" class="label__form">Platos o bandejas?</label>
                     <select name="pBand" id="pBand">
                         <option value="none"></option>
@@ -72,76 +74,79 @@
                         <option value="bandejas para mesas decoradas">bandejas para mesas decoradas</option>
                     </select required>
 
+                   <button type="submit" onclick="cantidad()">Mandalo</button>
+                    
                 </form>
 
                 <div class="buttons">
                     <button onclick="window.location.href='#cotizacion-app '; " class="btn__back"><iconify-icon
                             icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
-                    <button onclick="window.location.href='#hot-food '; " class="btn__next">Next <iconify-icon
+                            <button type="submit" onclick="window.location.href='#hot-food '; " class="btn__next" > next<iconify-icon
                             icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
-                </div>
-            </div>
-            <!-- picadera acliente -->
-            <section class="hot__food" id="hot-food">
-
-                <h2 class="food__title">Selecciona las <span class="color__orange">Las calientes</span></h2>
-
-                <div class="hot__cards">
-                    <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
-                        <h4 class="hot__card--title">Quipe de pollo</h4>
+                        </div>
                     </div>
-                    <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                    
+                    <section class="hot__food" id="hot-food">
+                        
+                        <h2 class="food__title">Selecciona las <span class="color__orange">Las calientes</span></h2>
+                        
+                        <div  id="hot-cards" class="hot__cards">
+                            <div class="hot__card">
+                                <input checked><img src="#" alt="" class="hot__img" value="Quipe de pollo"></input>
+                                <h4 class="hot__card--title">Quipe de pollo</h4>
+                            </div>
+                            <input type="submit" onclick="cantidad()">Mandalo</input>
+                            <div class="hot__card">
+                        <input checked></input>
                         <h4 class="hot__card--title">Quipe de res</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
-                        <h4 class="hot__card--title">Quipe de ques</h4>
+                        <input type="checkbox"><img src="#" alt="" class="hot__img"></input>
+                        <h4 class="hot__card--title">Quipe de queso</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">pastelitos de pollo</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">pastelitos de queso</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">pastelitos de res molida</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">pastelitos de queso y puerro</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">Croquetas de pollo</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">corquetas de bacalao</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title">Tarticos de pizza</h4>
                     </div>
                     <div class="hot__card">
-                        <button><img src="#" alt="" class="hot__img"></button>
+                        <input><img src="#" alt="" class="hot__img"></input>
                         <h4 class="hot__card--title"></h4>
                     </div>
                 </div>
                 <div class="buttons">
                     <button onclick="window.location.href='#opciones '; " class="btn__back"><iconify-icon
                             icon="uil:arrow-up" rotate="270deg"></iconify-icon>Back</button>
-                    <button onclick="window.location.href='#cool-food'; " class="btn__next">Next <iconify-icon
+                    <button onclick="window.location.href='# cool-food'; " class="btn__next">Next <iconify-icon
                             icon="uil:arrow-up" rotate="90deg"></iconify-icon> </button>
                 </div>
 
             </section>
 
-            <!-- picadera fria -->
+           
             <section class="cool__food" id="cool-food">
 
                 <h2 class="food__title">Selecciona las <span class="color__orange">Las frias</span></h2>
@@ -169,7 +174,7 @@
                 </div>
 
             </section>
-            <!-- confirmacion -->
+         
             <section class="confirmacion" id="block-confirm">
                 <h2 class="conf__h2">Felicidades</h2>
                 <h3 class="conf__h3">has creado tu presupuesto</h3>
