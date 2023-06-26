@@ -1,7 +1,6 @@
 
-import {menuBar} from './nav-bar.js';
 
-menuBar();
+
 
 //app cotizaciones
 // -------------------

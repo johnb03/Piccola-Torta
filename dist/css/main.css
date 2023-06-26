@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300;1,400&display=swap");
 html {
-  font-family: "Anton", sans-serif;
   color: #f1f1f1;
   scroll-snap-type: y mandatory;
   overflow-y: smooth;
@@ -14,12 +16,17 @@ body {
   overflow-x: hidden;
 }
 
-section {
+section, nav {
   scroll-snap-align: start;
 }
 
+h1 {
+  font-family: "Anton", sans-serif;
+}
+
 h2, h3 {
-  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 a,
@@ -28,8 +35,9 @@ ul {
   list-style: none;
 }
 
-p {
-  font-family: "Bebas Neue", sans-serif;
+p, a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
 }
 
 button {
@@ -37,7 +45,6 @@ button {
 }
 
 html {
-  font-family: "Anton", sans-serif;
   color: #f1f1f1;
   scroll-snap-type: y mandatory;
   overflow-y: smooth;
@@ -49,12 +56,17 @@ body {
   overflow-x: hidden;
 }
 
-section {
+section, nav {
   scroll-snap-align: start;
 }
 
+h1 {
+  font-family: "Anton", sans-serif;
+}
+
 h2, h3 {
-  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 a,
@@ -63,8 +75,9 @@ ul {
   list-style: none;
 }
 
-p {
-  font-family: "Bebas Neue", sans-serif;
+p, a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
 }
 
 button {
@@ -97,10 +110,31 @@ button {
   visibility: hidden;
 }
 
+.nav__menu--movil {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+}
+
 .list__link {
   color: #f1f1f1;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  font-family: sans-serif;
+  filter: drop-shadow(20px 20px 30px rgb(0, 0, 0));
+}
+
+.list__link:hover {
+  cursor: pointer;
+  color: #ffbd4a;
+  transform: scale(1);
+}
+
+.list__link::before {
+  content: " Servicios";
+  display: block;
+  position: absolute;
+  top: 1.8rem;
+  left: 5rem;
+  color: black;
+  filter: blur(5px);
 }
 
 .list__link:hover {
@@ -111,69 +145,11 @@ button {
   cursor: pointer;
 }
 
-.ham {
-  display: block;
-  width: 34px;
-  height: 3px;
-  margin-right: 0.4rem;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.ham::after {
-  content: "";
-  position: relative;
-  bottom: 11px;
-  display: block;
-  width: 34px;
-  height: 3px;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.ham::before {
-  content: "";
-  position: relative;
-  top: 8px;
-  display: block;
-  width: 34px;
-  height: 3px;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.ham:hover {
-  cursor: pointer;
-}
-
-.ham:active {
-  transform: scale(0.9);
-}
-
-.toggle {
-  visibility: visible;
-  top: 4rem;
-  right: 3px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 64px);
-  background: linear-gradient(135.05deg, #124b39 0%, #1b7e7f 0.32%, #115c5c 18.08%, #124f50 38.69%, #124848 44.49%, #0d3e3f 61.63%, #0c3a3a 78.21%);
-  text-align: center;
-  gap: 2rem;
-  transition: all 400ms ease-in-out;
-}
-
-.toggle .list__link {
-  font-size: 1.5rem;
-  padding: 2px 20px;
-  border-radius: 15px;
-}
-
 @media screen and (min-width: 90em) {
   .nav-menu {
     visibility: visible;
     left: 75%;
-    top: 19%;
+    top: 15%;
     gap: 1rem;
     z-index: 10;
   }
@@ -183,7 +159,7 @@ button {
     font-size: 1.3rem;
     letter-spacing: 1.8px;
   }
-  .ham {
+  .nav__menu--movil {
     display: none;
   }
 }
@@ -502,6 +478,7 @@ template {
     height: 90vh;
     flex-direction: row;
     justify-content: flex-start;
+    padding-top: 1em;
   }
   section.banner .banner-left {
     width: 45em;
@@ -596,6 +573,16 @@ template {
   .productos .productos__image {
     width: 45%;
   }
+  .client__avatars {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)) !important;
+  }
+  .avatar__copy {
+    text-align: center;
+    width: 20rem !important;
+  }
+  .avatar__name {
+    font-size: 1.1rem;
+  }
   .footer .footer-redes,
   .footer .footer-addres,
   .footer .footer__R {
@@ -609,7 +596,6 @@ template {
   }
 }
 html {
-  font-family: "Anton", sans-serif;
   color: #f1f1f1;
   scroll-snap-type: y mandatory;
   overflow-y: smooth;
@@ -621,12 +607,17 @@ body {
   overflow-x: hidden;
 }
 
-section {
+section, nav {
   scroll-snap-align: start;
 }
 
+h1 {
+  font-family: "Anton", sans-serif;
+}
+
 h2, h3 {
-  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 a,
@@ -635,8 +626,9 @@ ul {
   list-style: none;
 }
 
-p {
-  font-family: "Bebas Neue", sans-serif;
+p, a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
 }
 
 button {
@@ -679,6 +671,8 @@ button {
 }
 .banner-left .cta a {
   color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .banner-rigth .banner__img {
@@ -771,7 +765,7 @@ button {
   letter-spacing: 2px;
 }
 .productos__copy .productos__text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .ayuda {
@@ -782,7 +776,7 @@ button {
 .ayuda .ayuda__title {
   font-size: clamp(1.1rem, 10vw, 3rem);
   padding-top: 20px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 .ayuda .carrousel {
   width: 90%;
@@ -832,6 +826,61 @@ button {
 }
 .ayuda .punto.activo {
   background-color: #1b7e7f;
+}
+
+.cards__clientes {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1.2em;
+  border-bottom: solid 1px #f1f1f1;
+}
+.cards__clientes .client__title {
+  text-transform: uppercase;
+  margin: 2rem;
+  padding-top: 2rem;
+  font-size: calc(1.3rem + 22 * (100vw - 300px) / 1100);
+}
+.cards__clientes .client__avatars {
+  width: 90%;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+.cards__clientes .client__avatars .card__avatar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 0.8rem;
+  box-shadow: 10px 22px 15px -3px rgba(0, 0, 0, 0.3);
+}
+.cards__clientes .client__avatars .card__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: solid 8px #ffbd4a;
+  overflow: hidden;
+}
+.cards__clientes .client__avatars .card__img .avatar-client {
+  width: 100%;
+  height: auto;
+}
+.cards__clientes .client__avatars .avatar__copy {
+  width: 14rem;
+  max-width: 300px;
+  line-height: 1.5rem;
+}
+.cards__clientes .client__avatars .avatar__paraph {
+  font-size: calc(1rem + 4 * (100vw - 300px) / 1100);
+}
+.cards__clientes .client__avatars .avatar__name {
+  margin: 0;
 }
 
 .footer {
@@ -894,4 +943,8 @@ button {
 }
 .firma span {
   color: #ffbd4a;
+}
+
+.svg-wave {
+  fill: rgb(14, 77, 78);
 }/*# sourceMappingURL=main.css.map */

@@ -41,6 +41,8 @@
 
     a {
       color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
 }
@@ -138,7 +140,7 @@
     letter-spacing: 2px;
   }
   .productos__text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -220,6 +222,83 @@
 }
 }
 
+.cards__clientes{
+  width: 100%;
+text-align: center;
+padding-bottom: 1.2em;
+border-bottom:solid 1px #f1f1f1 ;
+
+
+
+
+ .client__title{
+  text-transform: uppercase;
+  margin: 2rem ;
+  padding-top: 2rem;
+ @include fontWidthTitle;
+  
+
+
+ }
+ 
+
+
+
+
+.client__avatars{
+ width: 90%;
+display: grid;
+gap: 1rem;
+grid-auto-rows: 22rem;
+grid-template-columns: repeat( auto-fill, minmax(16rem,1fr));
+align-items: center;
+justify-items: center;
+
+margin:0 auto ;
+
+  .card__avatar{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+    border-radius: 10px;
+    padding: .8rem;
+
+
+    @include boxShadowCard;
+  }
+  .card__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: solid 8px $secondary-color ;
+    overflow: hidden;
+ 
+
+    .avatar-client{
+      width: 100%;
+      height: auto;
+      
+    }
+  }
+  .avatar__copy{
+    width:14rem;
+    max-width: 300px;
+    line-height: 1.5rem;
+    
+  }
+  .avatar__paraph{
+    @include fontWidthcopy;
+
+  }
+  .avatar__name{
+    margin: 0;
+  }
+ }
+
+}
+
 
 
 .footer {
@@ -233,6 +312,7 @@
   text-align: center;
   padding: 10px;
   scroll-snap-align: end;
+
 }
 
 .footer-redes,
@@ -289,5 +369,9 @@
   span {
     color: $secondary-color;
   }
+}
+
+ .svg-wave {
+  fill:rgba(14, 77, 78, 1)  ;
 }
 

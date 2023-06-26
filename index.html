@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+    <html lang="es">
 
 <head>
     <link rel="stylesheet" href="/dist/css/main.css">
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <div class="container ">
         <nav class="main-nav">
             <img src="/assets/logo.ico.svg" alt="logo-piccola" class="icon-nav">
@@ -24,13 +25,20 @@
                 <li class="list__item"><a href="https://wa.me/18497015300" target="_blank"
                         class="list__link">Contacto</a></li>
             </ul>
-            <span class="ham"></span>
+            <!-- <span class="ham"></span> -->
+            <ul class="nav__menu--movil">
+                <li class="list__item--movil"><a href="https://wa.me/18497015300"><iconify-icon icon="fluent:people-call-24-regular" style="color: #f1f1f1;" width="36"></iconify-icon></a></li> 
+                <li class="list__item--movil"><a href="#acercaDe"><iconify-icon icon="mdi:about" style="color: #f1f1f1;" width="36"></iconify-icon></a></li> 
+                <li class="list__item--movil"><a href="#serviCios"><iconify-icon icon="fluent:service-bell-24-regular" style="color: #f1f1f1;" width="36"></iconify-icon></a></li> 
+            </ul>
         </nav>
         <section class="banner   ">
             <article class="banner-left  ">
                 <img class="logo" src="/assets/Logo - prueba 1.svg" alt="">
                 <h1 class="title">Productos frescos y deliciosos todos los dias</h1>
-                <button class="cta"><a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización." target="_blank">Cotizar</a></button>
+                <button class="cta"><a
+                        href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización."
+                        target="_blank">Cotizar</a></button>
             </article>
             <article class="banner-rigth">
                 <img class="banner__img" src="/assets/bg-bannser 1.png" alt="platos">
@@ -74,6 +82,7 @@
             </article>
         </section>
 
+
         <section id="serviCios" class="ayuda ">
             <!-- <div class="ayuda__bg"></div> -->
 
@@ -102,6 +111,45 @@
             </ul>
 
         </section>
+        <section id="section-clients">
+
+            <article class=" cards__clientes ">
+
+                    <h2 class="client__title">Que opinan nuestros clentes?</h2>   
+
+                <div class="client__avatars">
+
+                    <div class="card__avatar ">
+                        <div class="card__img"><img src="/assets/avatar-1.png" alt="avatar" class="avatar-client"></div>
+                        <div class="avatar__copy">
+                            <p class="avatar__paraph">"¡Gracias a Piccola Torta por superar nuestras expectativas con su excepcional servicio y deliciosa comida en nuestro evento!"</p>
+                            <h6 class="avatar__name">Rosa Berroa</h6>
+                        </div>
+                    </div>
+                    <div class="card__avatar ">
+                        <div class="card__img"><img src="/assets/avatar-2.png" alt="avatar" class="avatar-client"></div>
+                        <div class="avatar__copy">
+                            <p class="avatar__paraph">"El servicio impecable y los sabores auténticos de Piccola Torta hicieron que nuestra visita fuera inolvidable. ¡Definitivamente volveremos!"</p>
+                            <h6 class="avatar__name">Felix Jose Vicente</h6>
+                        </div>
+                    </div>
+                    <div class="card__avatar ">
+                        <div class="card__img"><img src="/assets/avatar-3.png" alt="avatar" class="avatar-client"></div>
+                        <div class="avatar__copy">
+                            <p class="avatar__paraph">"Estamos agradecidos por la atención al detalle y el servicio excepcional de Piccola Torta en nuestra celebración. Fue una experiencia impecable de principio a fin."</p>
+                            <h6 class="avatar__name">Adrian Emilios</h6>
+                        </div>
+                    </div>
+                    <div class="card__avatar ">
+                        <div class="card__img"><img src="/assets/avatar-4.png" alt="avatar" class="avatar-client"></div>
+                        <div class="avatar__copy">
+                            <p class="avatar__paraph">"La experiencia en Piccola Torta fue espectacular, con un ambiente acogedor, música en vivo y un servicio atento. Gracias por una noche llena de sabores exquisitos."</p>
+                            <h6 class="avatar__name">Jose Ramirez</h6>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
 
         <footer class="footer">
             <img src="/assets/Logo - footer.png" alt="" class="footer__logo">
@@ -125,12 +173,15 @@
             <spam class="line-footer"></spam>
             <div class="footer__R">
                 <a href="#acercaDe">ABOUT US </a>
-                <a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización." target="_blank">COTIZACIONES</a>
+                <a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización."
+                    target="_blank">COTIZACIONES</a>
                 <a href="https://wa.me/18497015300" target="_blank">CONTACTO</a>
             </div>
         </footer>
-        <p class="firma"> <span>Piccola-torta</span> todos los derechos reservados <span>&copy;</span></p>
+        <section>
+            <p class="firma"> <span>Piccola-torta</span> todos los derechos reservados <span>&copy;</span></p>
+        </section>
     </div>
 </body>
-
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </html>

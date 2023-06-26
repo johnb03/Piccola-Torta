@@ -1,9 +1,10 @@
 @media screen and (min-width: 80em) {
   section.banner {
-    // position: relative;
+
     height: 90vh;
     flex-direction: row;
     justify-content: flex-start;
+    padding-top: 1em;
     .banner-left {
       width: 45em;
 
@@ -134,7 +135,17 @@
    
   }
 
+  .client__avatars{
+    grid-template-columns: repeat( auto-fill, minmax(30rem,1fr)) !important;
   
+  }
+  .avatar__copy{
+    text-align: center;
+    width: 20rem !important;
+  }
+  .avatar__name{
+    font-size: 1.1rem;
+  }
 
 
   .footer {
