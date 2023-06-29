@@ -33,12 +33,18 @@
     font-size: 1.8rem;
   }
 
+  .blog__button{
+    margin-top: 10px;
+  }
+
+
   .cta {
     align-self: flex-end;
     border-radius: 5px;
     padding: 3px 8px;
     background-color: $secondary-color;
 
+   
     a {
       color: #000;
       font-weight: bold;
