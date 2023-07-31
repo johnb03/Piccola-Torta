@@ -5,11 +5,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300;1,400&display=swap");
 html {
-  color: #f1f1f1;
-  height: 100vh;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  color: #f1f1f1;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -39,11 +45,17 @@ button {
 }
 
 html {
-  color: #f1f1f1;
-  height: 100vh;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  color: #f1f1f1;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -472,6 +484,7 @@ template {
     width: 45em;
     height: inherit;
     padding-left: 5rem;
+    margin-bottom: 1.5rem;
   }
   section.banner .banner-left .logo {
     width: 60%;
@@ -511,6 +524,9 @@ template {
     padding: 10px 40px;
     border-radius: 18px;
   }
+  .productos {
+    flex-flow: row nowrap !important;
+  }
   .productos .productos__copy {
     text-align: right;
   }
@@ -520,6 +536,7 @@ template {
     padding: 0px 30px;
   }
   .productos .productos__copy .productos__text {
+    width: 34rem;
     font-size: 1.8rem;
     padding: 0px 30px 0px 60px;
     letter-spacing: 1.3px;
@@ -561,6 +578,14 @@ template {
   .productos .productos__image {
     width: 45%;
   }
+  .oferta .oferta__title {
+    font-size: 2rem;
+  }
+  .oferta .oferta__R {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+  }
   .client__avatars {
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)) !important;
   }
@@ -584,11 +609,17 @@ template {
   }
 }
 html {
-  color: #f1f1f1;
-  height: 100vh;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  color: #f1f1f1;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -626,7 +657,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 1rem;
 }
 
 .banner-left {
@@ -666,7 +697,6 @@ button {
 }
 
 .about {
-  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -710,28 +740,28 @@ button {
   padding: 0 10px;
   margin: 2px;
 }
-.card__copy .cta {
+
+.cta-2 {
   border-radius: 5px;
   padding: 3px 8px;
   background-color: #1b7e7f;
 }
-.card__copy .cta a {
+.cta-2 a {
   color: #f1f1f1;
   letter-spacing: 1.5px;
 }
 
 .productos {
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column nowrap;
 }
 
 .productos__image {
-  width: 45em;
-  min-width: 20em;
+  width: 18em;
+  max-width: 40em;
+  margin: 0 auto;
 }
 .productos__image .anatomia {
   width: 100%;
@@ -740,9 +770,8 @@ button {
 }
 
 .productos__copy {
-  width: 45em;
-  min-width: 300px;
   padding: 10px;
+  padding-top: 6rem;
 }
 .productos__copy .productos__title {
   font-weight: 400;
@@ -753,64 +782,22 @@ button {
   font-size: 1.2rem;
 }
 
-.ayuda {
-  height: 99vh;
-  background: #ffbd4a;
-  text-align: center;
-}
-.ayuda .ayuda__title {
-  font-size: clamp(1.1rem, 10vw, 3rem);
-  padding-top: 20px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-.ayuda .carrousel {
-  width: 90%;
-  max-width: 60em;
-  margin: 0 auto;
-  border-radius: 50px;
-  background: #ffbd4a;
-  box-shadow: 13px 13px 37px #bd8c37, -13px -13px 37px #ffee5d;
-  overflow-x: hidden;
-}
-.ayuda .c__grande {
-  width: 400%;
-  height: 48.7vh;
-  overflow: hidden;
-  border-radius: 20px;
+.oferta {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  flex-flow: column nowrap;
+  gap: 1rem;
   align-items: center;
-  transition: all 0.5s ease;
-  transform: translateX(0%);
+  padding: 1.5rem 1rem 1rem;
+  background-color: #ffffff;
 }
-.ayuda .c__image {
-  width: 25%;
-  height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
+.oferta .oferta__title {
+  color: black;
+  margin-bottom: 1rem;
 }
-.ayuda .puntos {
-  width: inherit;
-  margin: 1em 0 0;
-  padding: 4em;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-}
-.ayuda .punto {
-  width: 2em;
-  height: 2em;
-  margin: 1em 1m 0;
-  border-radius: 100%;
-  border-radius: 50px;
-  background: #ffbd4a;
-  box-shadow: 4px 4px 7px #b08233, -4px -4px 7px #fff861;
-}
-.ayuda .punto.activo {
-  background-color: #1b7e7f;
+.oferta .oferta__img {
+  width: 100%;
+  max-width: 40em;
+  height: auto;
 }
 
 .cards__clientes {

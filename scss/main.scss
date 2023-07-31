@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top:1rem ;
 }
 .banner-left {
   padding: 10px;
@@ -60,7 +60,7 @@
   }
 }
 .about {
-  height: 100vh;
+ 
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -103,42 +103,45 @@
     padding: 0 10px;
     margin: 2px;
   }
-  .cta {
-    border-radius: 5px;
-    padding: 3px 8px;
-    background-color: $primary-color;
+ 
+}
 
-    a {
-      color: $white-fortext;
-      letter-spacing: 1.5px;
-    }
+.cta-2 {
+  border-radius: 5px;
+  padding: 3px 8px;
+  background-color: $primary-color;
+
+  a {
+    color: $white-fortext;
+    letter-spacing: 1.5px;
   }
 }
 
 .productos {
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column nowrap;
 }
 
 .productos__image {
-  width: 45em;
-  min-width: 20em;
+width: 18em;
+max-width: 40em;
 
+  
+margin: 0 auto;
   .anatomia {
     width: 100%;
     height: auto;
+    // margin:.5rem;
     @include shadowAnat;
   }
 }
 
 .productos__copy {
-  width: 45em;
-  min-width: 300px;
   padding: 10px;
+  padding-top: 6rem;
+
 
   .productos__title {
     font-weight: 400;
@@ -150,83 +153,32 @@
   }
 }
 
-// ------- ayuda section
+// ------- section ofertta
+.oferta{
+  
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+align-items: center;
+   
+  padding: 1.5rem 1rem 1rem;
 
-.ayuda{
-  height: 99vh;
-  background: $secondary-color;
-  text-align: center;
+  background-color: #ffffff;
 
-
-  .ayuda__title{
-    font-size: clamp(1.1rem, 10vw, 3rem);
-    padding-top: 20px;
-    @include textShadows;
+.oferta__title{
+  color: black;
+  margin-bottom: 1rem;
+}
+  .oferta__img{
+    width: 100%;
+    max-width: 40em;
+    height: auto;
   }
-
-.carrousel{
-  width: 90%;
-  max-width: 60em;
-
-  margin: 0 auto;
-  @include neoC;
-  overflow-x: hidden;
- 
-  
-  
-}
-.c__grande{
-  width: 400%;
-  height: 48.7vh;
-  overflow: hidden;
-  border-radius: 20px;
-  
-
-  
-  
-
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  
-
-
-  transition: all .5s ease;
-  transform: translateX(0%);
 }
 
-.c__image{
-  width: calc(100% / 4);
-  height: inherit;
-  object-fit: cover;
-}
 
-.puntos{
-  width: inherit;
-  margin: 1em 0 0 ;
-  padding: 4em;
-  display: flex;
-  flex-flow:row  nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: .8rem;
 
-}
-.punto{
-  width: 2em;
-  height: 2em;
-  margin:  1em 1m  0;
-  border-radius: 100%;
-  
-  @include neoP;
-}
 
-.punto.activo{
-  background-color: $primary-color;
-}
-}
 
 .cards__clientes{
   width: 100%;
