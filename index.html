@@ -2,208 +2,90 @@
 <html lang="es">
 
 <head>
-    
-    <link rel="stylesheet" href="./dist/css/main.css">
+    <!-- hoja de stilos -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- seo tag -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="el proposito de esta web es dartle ayudar al consumidor con sus actividades">
-    <meta name="keywords" content="pastelitos, pastel en hoja,  empanadas, actividades, cocina gourmet">
+    <meta name="description" content="Picaderas listas para tus actividades 100% dominicanas">
+    <meta name="keywords" content="pastelitos, picaderas, quipes,  empanadas, actividades, cocina dominicana">
     <meta name="autor" content="JOB">
-    <script defer src="/js/index.js" type="module"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866566949597231"
-        crossorigin="anonymous"></script>
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-
+    <!-- scripts-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script defer src="" type=""></script>
+    <!-- titulo -->
     <title>Piccola Torta </title>
 </head>
 
-<body>
-    <div class="container ">
-        <nav class="main-nav">
-            <img src="/assets/logo.ico.svg" alt="logo-piccola" class="icon-nav">
-            <ul class="nav-menu  ">
-                <li class="list__item"><a href="#acercaDe" class="list__link">Acerca de</a></li>
-                <li class="list__item"><a href="#serviCios" class="list__link">servicios</a></li>
-                <li class="list__item"><a href="https://wa.me/18497015300" target="_blank"
-                        class="list__link">Contacto</a></li>
-            </ul>
-            <!-- <span class="ham"></span> -->
-            <ul class="nav__menu--movil">
-                <li class="list__item--movil"><a href="https://wa.me/18497015300"><iconify-icon
-                            icon="fluent:people-call-24-regular" style="color: #f1f1f1;" width="36"></iconify-icon></a>
-                </li>
-                <li class="list__item--movil"><a href="#footer-main"><iconify-icon icon="mdi:about"
-                            style="color: #f1f1f1;" width="36"></iconify-icon></a></li>
-                <li class="list__item--movil"><a href="#serviCios"><iconify-icon icon="fluent:service-bell-24-regular"
-                            style="color: #f1f1f1;" width="36"></iconify-icon></a></li>
-            </ul>
-        </nav>
-        <section class="banner   ">
-            <article class="banner-left  ">
-                <img class="logo" src="/assets/Logo - prueba 1.svg" alt="">
-                <h1 class="title">Aprobecha nuestras ofertas dentro de whatsaap! </h1>
-                <h3></h3>
-                <button class="cta"><a
-                        href="https://wa.me/18497015300?text=Hola!%20me gustaria%20la oferta."
-                        target="_blank">Obten tu oferta!</a></button>
-                <button class="cta blog__button "><a href="https://piccolatortard.blogspot.com/ " target="_blank" aria-selected="false">Blog</a></button>
-            </article>
-            <article class="banner-rigth">
-                <img class="banner__img" src="/assets/bg-bannser 1.png" alt="platos">
-            </article>
-        </section>
-        <section id="acercaDe" class="about  ">
-            <article class="about__left ">
-                <img class="abaut__img" src="/assets/image-nosotros.png" alt="mesa con harina">
-            </article>
-            <span class="line__about"></span>
-            <arctticle class="about__right ">
-                <div class="card__copy">
-                    <h2 class="title__copy">Quienes somos?</h2>
-                    <p class="copy__about">Somos una empresa dedicada a ofrecer preparaciones frescas y deliciosas
-                        diariamente. Nos enfocamos en la calidad de nuestros ingredientes y en la preparación artesanal
-                        de nuestros productos para ofrecerte la mejor experiencia culinaria.
-                    </p>
+<body id="index " class="bg-gradientBackG">
+
+    <!-- header nav -->
+    <header class=" col-start-1 col-end-6 max-h-32 ">
+        <a class="md:hidden " href="#"><img class="w-[50%] h-auto m-auto" src="/public/image/logo-nav.png" alt="logo">
+            </acl>
+            <nav id="#index" class="hidden   md:flex p-2 pt-3  justify-between items-center  ">
+                <div class="w-36 ">
+                    <a href="#"><img src="/public/image/logo-nav.png" alt="logo" class=""> </a>
                 </div>
-                <div class="card__copy">
-                    <p class="copy__about copy-r"> Realiza tu pedido ahora
-                        No esperes más para disfrutar de nuestros productos frescos</p>
-                    <button class="cta-2"><a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20la oferta.">Tu oferta</a></button>
-                </div>
-            </arctticle>
-        </section>
+                <ul class=" flex gap-4 text-whiteD ">
+                    <!-- <li><a href="#" class="links-hover font-semibold  p-2 rounded-md">Inicio</a></li>
+                    <li><a href="#" class="links-hover font-semibold   p-2 rounded-md">Cotizador</a></li>
+                    <li><a href="#" class="links-hover font-semibold   p-2 rounded-md">Servicios</a></li> -->
+                </ul>
+                <button class="border-solid border-[1px] border-whiteD rounded-xl text-whiteD p-2 buttonHover">
+                    <a target="_blank"  href="https://wa.link/kkd05c" >contactanos!</a>
+                </button>
+            </nav>
+    </header>
 
-        <section id="anatomia_">
-            <article>
-                <div class="productos">
-                    <div class="productos__image">
-                        <img class="anatomia" src="/assets/Anatomia.png" alt="pastelito definicion">
-                    </div>
-                    <div class="productos__copy">
-                        <h2 class="productos__title">nuestros productos</h2>
-                        <p class="productos__text">Ofrecemos una variedad de productos frescos que son preparados
-                            diariamente
-                        </p>
-                        <p class="productos__text "><span>entre ellos se encuentran:</span> quipes, empanadas, croquetas de
-                            pollo o bacalao, mini-wrap, tarticos, etc...</p>
-                        <p class="productos__text">todos ellos hechos con los ingredientes más frescos del mercado y con una
-                            gran atención en los detalles de la preparación.</p>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <section id="Offert" >
-            <article>
-                <div class="oferta">
-                    <div class="oferta__R">
-                        <h2 class="oferta__title">Obten esta y otras ofertas en nuestro whatsapp</h2>
-                        <button class="cta-2"><a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20la oferta.">toma tu oferta!</a></button></div>
-                    <img class="oferta__img" src="/assets/offert-image.png" alt="Offert">
-                </div>
-            </article>
-        </section>
-
-
-        <section id="section-clients">
-
-            <article class=" cards__clientes ">
-
-                <h2 class="client__title">Que opinan nuestros clentes?</h2>
-
-                <div class="client__avatars">
-
-                    <div class="card__avatar ">
-                        <div class="card__img"><img src="/assets/avatar-1.png" alt="avatar" class="avatar-client"></div>
-                        <div class="avatar__copy">
-                            <p class="avatar__paraph">"¡Gracias a Piccola Torta por superar nuestras expectativas con su
-                                excepcional servicio y deliciosa comida en nuestro evento!"</p>
-                            <h6 class="avatar__name">Rosa Berroa</h6>
+    <!-- grid start -->
+    <section class="  flex h-screen w-full items-center justify-center md:p-6 p-2  ">
+        <div class="hero-grid bg-whiteD ">
+  <!-- hero -->
+         <div class="  bg-primaryColor cards-hero md:col-span-4 md:row-span-3 col-span-6 p-3 row-span-6  gap-2  
+         flex flex-col justify-evenly">
+         
+                  <div class="flex md:text-left md:flex-row flex-col  ">
+                        <div class="md:h-72 flex flex-col gap-3 justify-center">
+                            <h1 class="md:textClamp leading-10   text-2xl text-whiteD">Tus <span class="text-secondDaryColor"> Picaderas</span> para  eventos</h1>
+                            <p class="text-[1.3rem] leading-6  text-whiteD">El cotizador de Piccola Torta te ahorra tiempo creado facilmente el presupuesto de tu actividad. </p>
+                        </div>
+                        <div class=" md:w-72 md:h-auto w-40 h-40 flex justify-center"> 
+                            <img class="shadow-realist" src="/public/image/mokup-hero.svg" alt="">  
                         </div>
                     </div>
-                    <div class="card__avatar ">
-                        <div class="card__img"><img src="/assets/avatar-2.png" alt="avatar" class="avatar-client"></div>
-                        <div class="avatar__copy">
-                            <p class="avatar__paraph">"El servicio impecable y los sabores auténticos de Piccola Torta
-                                hicieron que nuestra visita fuera inolvidable. ¡Definitivamente volveremos!"</p>
-                            <h6 class="avatar__name">Felix Jose Vicente</h6>
-                        </div>
-                    </div>
-                    <div class="card__avatar ">
-                        <div class="card__img"><img src="/assets/avatar-3.png" alt="avatar" class="avatar-client"></div>
-                        <div class="avatar__copy">
-                            <p class="avatar__paraph">"Estamos agradecidos por la atención al detalle y el servicio
-                                excepcional de Piccola Torta en nuestra celebración. Fue una experiencia impecable de
-                                principio a fin."</p>
-                            <h6 class="avatar__name">Adrian Emilios</h6>
-                        </div>
-                    </div>
-                    <div class="card__avatar ">
-                        <div class="card__img"><img src="/assets/avatar-4.png" alt="avatar" class="avatar-client"></div>
-                        <div class="avatar__copy">
-                            <p class="avatar__paraph">"La experiencia en Piccola Torta fue espectacular, con un ambiente
-                                acogedor, música en vivo y un servicio atento. Gracias por una noche llena de sabores
-                                exquisitos."</p>
-                            <h6 class="avatar__name">Jose Ramirez</h6>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
+                    <ul class="text-[1rem] text-left text-whiteD w-[300px] ">
+                        <li class=" mb-2">🥞picaderas para cumpleaños</li>
+                        <li class="mb-2 ">🍱picaderas para eventos</li>
+                    </ul>
+                    <button  class="  text-xs w-[150px] h-10 rounded-lg bg-secondDaryColor  shadow-[9px_9px_0px_rgba(0,0,0,1)] uppercase font-semibold "><a href="/cotizador.html">Pruebalo!</a></button>
+                 </div>
 
-        <footer id="footer-main" class="footer">
-            <img src="/assets/Logo - footer.png" alt="" class="footer__logo">
-            <div class="footer-addres">
-                <h3 class="address__title">Donde estamos.</h3>
-                <p class="address__text"><a
-                        href="https://www.google.com/maps/place/Picco-la-Torta/@18.4663303,-69.8016158,16.5z/data=!4m16!1m9!3m8!1s0x8eaf87c9fd350421:0x62332baf859afc7b!2sPicco-la-Torta!8m2!3d18.4666435!4d-69.7979832!9m1!1b1!16s%2Fg%2F11fwd7cyk0!3m5!1s0x8eaf87c9fd350421:0x62332baf859afc7b!8m2!3d18.4666435!4d-69.7979832!16s%2Fg%2F11fwd7cyk0?entry=ttu"
-                        target="_blank">Calle fausto ceja rodriguez , km12 los frailes II , santo Domingo este</a></p>
+            <div class="cards-hero md:row-span-4 md:col-span-2 col-span-6 bg-heroBackground bg-cover bg-center"></div>
+            <div class="cards-hero md:col-span-3 col-span-6 bg-imageDivBG  bg-cover bg-center"></div>
+            <div
+                class="cards-hero   md:col-span-1 col-span-2  max-h-[250px] bg-secondDaryColor flex justify-center items-center 
+                ">
+                <a id="arrow" href="http://"><img  src="/public/image/pixelarticons_arrow-up.svg" alt=""></a>
             </div>
-            <div class="footer-redes">
-                <h3 class="redes__title">Follow us </h3>
-                <div class="redes__images">
-                    <a href="https://instagram.com/picco_la_torta?igshid=MzNlNGNkZWQ4Mg==" target="_blank"> <img
-                            src="/assets/uim_instagram-alt.svg" alt="instagram"></a>
-                    <a href="https://www.tiktok.com/@piccolatorta" target="_blank"><img
-                            src="/assets/ic_baseline-tiktok.svg" alt="tiktok"></a>
-                    <a href="https://www.facebook.com/profile.php?id=100054711582534" target="_blank"><img
-                            src="/assets/ic_baseline-facebook.svg" alt="facebook"></a>
-                </div>
-            </div>
-            <spam class="line-footer"></spam>
-            <div class="footer__R">
-                <a href="#acercaDe">ABOUT US </a>
-                <a href="https://wa.me/18497015300?text=Hola!%20me gustaria%20realizar%20una%20cotización."
-                    target="_blank">COTIZACIONES</a>
-                <a href="https://wa.me/18497015300" target="_blank">CONTACTO</a>
-            </div>
-        </footer>
-        <section>
-            <p class="firma"> <span>Piccola-torta</span> todos los derechos reservados <span>&copy;</span></p>
-        </section>
-    </div>
+
+
+        </div>
+    </section>
+
+
+
 </body>
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1203390123663980');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1203390123663980&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1713439702442767&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+
+
 </html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->

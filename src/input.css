@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+  @apply border-solid border-black border-2 
+} */
+@layer base{
+  html {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  p {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+}
+
+#box-items{
+  height: 300px
+}
+
+.hero-grid {
+  @apply w-[80%] h-full  md:m-auto p-6  rounded-xl
+  grid grid-cols-6 md:grid-rows-4 grid-rows-8  gap-4;
+}
+
+.cards-hero {
+  @apply rounded-3xl shadow-[9px_9px_0px_rgba(0,0,0,1)] text-5xl text-center;
+}
+
+.div-productos{
+  width: 145px;
+  cursor:pointer;
+}
+
+
+/* formulario */
+.progress-bar{
+  @apply  flex justify-center m-10 ml-0 mr-0 ;
+  .paso{
+    @apply text-center w-full relative;
+  }
+
+  p{
+    @apply text-base font-semibold mb-2
+  }
+
+  .num{
+    @apply relative w-7 h-7 border-solid border-2 border-black rounded-full inline-block leading-7   ;
+    span{
+      @apply text-xl leading-7 absolute translate-x-[-50%]
+    }
+  }
+  .check{
+    @apply inline-block h-6  ;
+    
+    
+  }
+
+  .check{
+    @apply invisible absolute left-[41%]  ;
+  }
+
+  .check.active{
+    @apply visible;
+  }
+
+}
+
+/* line progress-bar */
+.progress-bar{
+  
+  .num::before   {
+    position: absolute;
+    content: "";
+    width: 44px;
+    height: 3px;
+    bottom:11px;
+    right:-46px;
+    background: #000;
+  }
+  .num::after  {
+    position: absolute;
+    content: "";
+    width: 44px;
+    height: 3px;
+    bottom:11px;
+    right:-46px;
+    background: #000;
+  }
+/* animacion */
+.num.active::after{
+  background-color: #FFBD4A;
+  animation: lineForward 0.3s linear forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.num.active{
+  border-color: #FFBD4A;
+  background-color: #FFBD4A ;
+}
+
+.num.active span{
+  display: none;
+}
+
+ 
+
+.num::after ,.num::before{
+  @apply md:right-[-60px]
+} 
+}
+@keyframes lineForward{
+  100%{
+    transform: scaleX(1)
+  }
+}
+
+
+
+.pagina {
+  @apply w-1/4 transition-all ;
+    .titulo {
+      @apply  text-center text-[1.3rem] font-semibold ;
+    }
+
+    span{
+      @apply text-secondDaryColor  drop-shadow-sm;
+    }
+
+    
+}
+
+.grupo {
+  @apply h-9 w-80  flex justify-center relative mt-8 m-auto  ;
+  label {
+    @apply absolute top-[-30px] w-full  font-normal  text-left ml-20 ;
+  }
+  .number{
+    @apply w-[5.5rem] 
+  }
+}
+
+.pag-radio{
+
+  .titulo {
+    @apply  text-center text-[1.4rem] font-medium mb-4;
+  }
+  p{
+    @apply text-xl text-center pl-2
+  }
+
+  .div-radio{
+    @apply h-9 w-80 m-3 mb-0 flex items-center justify-center  gap-2;
+    input{
+      @apply w-5;
+    } 
+  }
+
+  
+ 
+
+ .numero {
+    @apply text-[1.2rem] 
+  } 
+}
+
+
+
+.inputText {
+  @apply w-[80%] h-full rounded-md text-[1rem] p-2 bg-gray-300;
+}
+
+.btns {
+  @apply flex justify-center  gap-5 m-3 ;
+  .btn {
+    @apply w-52 p-3   bg-gray-200 rounded-lg shadow-[9px_9px_0px_rgba(0,0,0,1)] border-none uppercase hover:bg-secondDaryColor transition active:scale-[0.96];
+  }
+}
+
+.total-final{
+  @apply flex gap-2 m-2 items-start ;
+
+  p{
+    @apply text-secondDaryColor bg-black rounded-md pl-2 pr-2;
+  }
+}
+
+/* mostrar mensaje de error */
+.error{
+  @apply text-red-400 float-right text-right
+}
+.error2{
+  @apply text-red-400 float-start;
+}
+.error3{
+  @apply text-red-400 ;
+}
+
+
+
+
+/* componentes */
+@layer components {
+  .links-hover {
+    @apply hover:bg-secondDaryColor hover:text-black hover:font-semibold transition duration-500 ease-in-out;
+  }
+
+  .mobileActiveMenu {
+    @apply absolute top-0 left-0 w-40 h-[100vh] bg-[#FFBD4A] flex flex-col justify-center gap-6 text-black  font-semibold;
+  }
+
+  
+
+  .cardItem {
+    @apply w-[141px] h-[150px] rounded-lg shadow-[0_30px_50px_-35px_rgba(0,0,0,0.5)] mb-3  hover:cursor-pointer touch-auto;
+  }
+
+  .itemMenu {
+    @apply flex  items-center gap-1 p-2  w-[110px]  bg-slate-100 text-xs font-bold rounded-lg hover:bg-secondDaryColor hover:text-black transition-all;
+  }
+
+  .iconHover {
+    @apply hover:text-secondDaryColor;
+  }
+
+  .buttonHover {
+    @apply hover:bg-secondDaryColor hover:text-black transition-colors duration-300 hover:border-transparent;
+  }
+
+  .textClamp {
+    font-size: clamp(2rem, 2vw + 1rem, 5rem);
+  }
+
+  .gridTemplate {
+    height: 100%;
+    gap: 3rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+  }
+
+ 
+
+}
+
+.shadow-realist{
+  filter: drop-shadow(15px 8px 15px rgba(0,0,0,0.5));
+}
+
+/* animacion arrow hero */
+
+#arrow{
+  position: relative;
+  animation: alternate infinite arrow-up 1.5s ease-in-out;
+  
+  
+}
+
+
+
+@keyframes arrow-up {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+
+}
