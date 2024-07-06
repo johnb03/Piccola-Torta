@@ -25,7 +25,7 @@ const boxItems = document.getElementById("box-items");
 const totalElement = document.getElementById("total");
 const resulCantidad = document.getElementById("result-cantidad");
 const resultBocadillos = document.getElementById("result-bocadillos");
-
+const resultEnvase = document.getElementById("result-envases");
 //crear una base de elementos
 function crearDiv(producto) {
   let div = document.createElement("div");
@@ -34,6 +34,7 @@ function crearDiv(producto) {
   boxItems.append(div);
 }
 
+// productos
 class bocadillos {
   constructor(imagen, nombre, subProducto, precio) {
     this.imagen = imagen;
@@ -50,7 +51,7 @@ class bocadillos {
 
     <div class="flex justify-between">
     <p id="precio" class="font-bold "> $${precio}.00</p>
-   <input  class=" item-select border-blue-500  w-[18px]" data-nombre="${nombre}" data-precio ="${precio}" type="checkbox" >
+   <input  class=" aspect-square item-select border-blue-500  w-[18px]" data-nombre="${nombre}" data-precio ="${precio}" type="checkbox" >
     </div> 
     `;
   }
@@ -60,27 +61,110 @@ class bocadillos {
 }
 
 let croquetasPollo = new bocadillos(
-  (src = "/public/image/croquetas.jpg"),
+  (src = "/public/image/imagenes de Productos/croquetas.jpg"),
   "corquetas",
   "de pollo",
-  23
+  25
 );
 
 let pastelitosPollo = new bocadillos(
-  (src = "/public/image/croquetas.jpg"),
+  (src = "/public/image/imagenes de Productos/pastelitos.jpg"),
   "Pastelito",
   "de pollo",
-  23
+  25
+);
+
+let bolitasDeYuca = new bocadillos(
+  (src = "/public/image/imagenes de Productos/Bolitas-de-yuca.jpg"),
+  "Bolitas",
+  "de yuca",
+  25
+);
+
+let brochetasMixtas = new bocadillos(
+  (src = "/public/image/imagenes de Productos/Brochetas-mixtas.jpg"),
+  "Brochetas",
+  "Mixtas",
+  35
+);
+
+let medallonesDeSalchicha = new bocadillos(
+  (src = "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg"),
+  "Medallones",
+  "de salchicha",
+  20
+);
+
+let miniAmburguesas = new bocadillos(
+  (src = "/public/image/imagenes de Productos/mini-amburguesas.jpg"),
+  "Mini",
+  "Amburguesas"
+);
+
+let miniSandwich = new bocadillos(
+  (src = "/public/image/imagenes de Productos/mini-sandwich.jpg"),
+  "Mini",
+  "Sandwich",
+  25
+);
+
+let miniWraps = new bocadillos(
+  (src = "/public/image/imagenes de Productos/mini-wraps.jpg"),
+  "Mini",
+  "Sandwich",
+  25
+);
+
+let empaQuesoCrema = new bocadillos(
+  (src = "/public/image/imagenes de Productos/Empanadillas.jpg"),
+  "Empanadillas ",
+  "de queso crema",
+  35
+);
+
+let empaPolloHorneado = new bocadillos(
+  (src = "/public/image/imagenes de Productos/Empanadillas.jpg"),
+  "Empanadillas ",
+  "de pollo horneado",
+  35
+);
+
+let empaCamarones = new bocadillos(
+  (src = "/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg"),
+  "Empanadillas ",
+  "de Camarones",
+  40
+);
+
+let miniHotdogs = new bocadillos(
+  (src = "/public/image/imagenes de Productos/mini-hotdogs.jpg"),
+  "Mini ",
+  "Hot-dogs",
+  75
+);
+
+let palitosMozarella = new bocadillos(
+  (src = "/public/image/imagenes de Productos/palitos-de-mozarella.jpg"),
+  "Palitos ",
+  "de mozarella",
+  35
 );
 
 croquetasPollo.verInfo();
 pastelitosPollo.verInfo();
-pastelitosPollo.verInfo();
-pastelitosPollo.verInfo();
+bolitasDeYuca.verInfo();
+brochetasMixtas.verInfo();
+medallonesDeSalchicha.verInfo();
+miniAmburguesas.verInfo();
+miniSandwich.verInfo();
+miniWraps.verInfo();
+empaPolloHorneado.verInfo();
+empaCamarones.verInfo();
+empaQuesoCrema.verInfo();
+miniHotdogs.verInfo();
+palitosMozarella.verInfo();
 
-
-
-//botones
+//botones adelante
 btn_adelante.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -177,8 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // unidadesxPer();
 
 btn_adelante3.addEventListener("click", (e) => {
-  
-
   const maxItemselect = unidadesxPer();
   const itemSelect = document.querySelectorAll(".item-select");
   const itemCount = Array.from(itemSelect).filter(
@@ -192,8 +274,6 @@ btn_adelante3.addEventListener("click", (e) => {
     cont += 1;
 
     calcularTotal();
-  
-
   } else {
     let errorSelecion = document.getElementById("title-seleccion");
     errorSelecion.classList.add("error3");
@@ -201,9 +281,22 @@ btn_adelante3.addEventListener("click", (e) => {
   }
 });
 
+//seleccion de envases
+function envases() {
+  const envase1 = document.getElementById("r4");
+  const envase2 = document.getElementById("r3");
+  if (envase1.checked) {
+    return envase1.value;
+  }
+  if (envase2.checked) {
+    return envase2.value;
+  }
+}
+
 // calculo total del presupuesto
 function calcularTotal() {
   const cantidad = parseFloat(inputNumber.value);
+  resultEnvase.textContent = ` Envase elegido: ${envases()}`;
   resulCantidad.textContent = `Excelente para ${cantidad} personas`;
 
   let selectedItems = document.querySelectorAll(".item-select:checked");
@@ -218,7 +311,7 @@ function calcularTotal() {
     const totalItemPrice = itemPrice * cantidad;
 
     let itemResult = document.createElement("p");
-    itemResult.textContent = `${itemName} : cantidad seleccionada ${cantidad}`;
+    itemResult.textContent = `${itemName} : cantidad  ${cantidad}`;
     resultBocadillos.appendChild(itemResult);
 
     total += totalItemPrice;
@@ -246,7 +339,6 @@ document.addEventListener("change", function (event) {
 });
 
 //obtenert los input
-
 
 //botones atras----------------------------------
 btn_atras1.addEventListener("click", (e) => {
@@ -285,7 +377,7 @@ btn_enviar.addEventListener("click", (e) => {
 
   setTimeout(() => {
     location.reload();
-  }, 2000); 
+  }, 2000);
 });
 
 //

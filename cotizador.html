@@ -29,7 +29,7 @@
 
     <!-- contenedor -->
     <div
-        class=" overflow-hidden  container md:w-4/12 min-w-[320px] pt-7 pl-1 pr-1  rounded-xl text-center  bg-whiteD shadow-[9px_9px_0px_rgba(0,0,0,1)] ">
+        class=" overflow-hidden container md:w-4/12 min-w-[320px] pt-7 pl-1 pr-1  rounded-xl text-center  bg-whiteD shadow-[9px_9px_0px_rgba(0,0,0,1)] ">
         <header class="text-2xl font-bold  ">Organiza tu presupuesto</header>
         <!-- barra de progreso -->
         <div class="progress-bar">
@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="  overflow-hidden  w-full  border-solid boder-black border-2 ">
+        <div class=" overflow-hidden  w-full  border-solid boder-black border-2 ">
             <form id="cliente-info" action="0" class=" flex  w-[400%] ">
 
                 <!-- pagina 1 -->
@@ -63,20 +63,20 @@
                     <div class="titulo">Informacion de contacto</div>
                     <div class="grupo">
                         <label for="">Nombre: <b class="error " id="nombre-error"></b></label>
-                        <input class="inputText " id="nombre" type="text" placeholder="Nombre" required>
+                        <input class="inputText " id="nombre" type="text" placeholder="Nombre">
                     </div>
                     <div class="grupo">
                         <label for="">Apellido: <b class="error " id="apellido-error"></b></label>
-                        <input class="inputText" id="apellido" type="text" placeholder="Apellido" required>
+                        <input class="inputText" id="apellido" type="text" placeholder="Apellido">
                     </div>
                     <div class="grupo">
                         <label for="">E-mail: <b class="error" id="email-error"></b></label>
-                        <input class="inputText" id="email" type="email" placeholder="E-mail" required>
+                        <input class="inputText" id="email" type="email" placeholder="E-mail">
                     </div>
                     <div class="grupo">
                         <label for="">numero: <b class="error" id="numero-error"></b></label>
                         <input class="inputText" id="numero" type="tel" placeholder="809-000-000"
-                            pattern="/.*[0-9]{3}-[0-9]{3}-[0-9]{4}.*/">
+                            pattern="/.* [0-9]{3}-[0-9]{3}-[0-9]{4} .*/">
                     </div>
                     <div class="grupo">
                         <label for="">Fecha de Nacimiento <b class="error " id="fechaNac-error"></b> </label>
@@ -95,15 +95,15 @@
                         <b class="error2 " id="error-personas"></b>
                         <p id="error-personas">Cuantas Personas? </p>
                         <input id="cant-personas" class="mt-3 mb-3 ml-2 w-20    border-solid border-2 border-black"
-                            type="number" min="1" max="1000">
+                            type="number" min="1" max="1000" name="cantidad-personas">
                     </div>
- 
+
                     <p class="Sub__titles">Cuantas unidades por persona?</p>
                     <div class="div-radio ">
                         <label class="numero" for="">3</label>
-                        <input id="r1" type="radio" value="3" name="cantidad">
+                        <input id="r1" type="radio" value="3" name="unidades">
                         <label class="numero" for="">4</label>
-                        <input id="r2" type="radio" value="4" name="cantidad">
+                        <input id="r2" type="radio" value="4" name="unidades">
                     </div>
 
                     <p>Platos o bandejas elige una opcion</p>
@@ -143,17 +143,18 @@
 
                     <div id="datos-finales" class="flex flex-col  p-3">
                         <p id="result-cantidad"></p>
-                        <div id="result-bocadillos" > </div>
+                        <p id="result-envases"></p>
+                        <div id="result-bocadillos"> </div>
                         <p id="total"></p>
-                    <div>
+                        <div>
 
-                        <h3>Enviar Presupuesto?</h3>
-                        <div class="btns">
-                            <button class="btn atras__pag3 " type="button">Back</button>
-                            <button class="btn  enviar" type="submit">Enviar</button>
+                            <h3>Enviar Presupuesto?</h3>
+                            <div class="btns">
+                                <button class="btn atras__pag3 " type="button">Back</button>
+                                <button class="btn  enviar" type="submit">Enviar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
             </form>
         </div>
