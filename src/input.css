@@ -20,17 +20,19 @@
   }
 }
 
+input:hover{
+cursor: pointer;
+}
+
 #box-items {
   height: 300px;
 }
 
-.hero-grid {
-  @apply w-[80%] h-full  md:m-auto p-6  rounded-xl
-  grid grid-cols-6 md:grid-rows-4 grid-rows-8  gap-4;
-}
 
-.cards-hero {
-  @apply rounded-3xl shadow-[9px_9px_0px_rgba(0,0,0,1)] text-5xl text-center;
+
+
+.borders-shadows {
+  @apply rounded-3xl shadow-[9px_9px_0px_rgba(0,0,0,1)] ;
 }
 
 .div-productos {
@@ -246,4 +248,15 @@
   }
 }
 
+/* animacion hover hero */
+.card{
+  transition-property: transform  ;
+transition-duration:500ms ;
+}
+
+
+.cards .card:hover {
+  transform: scale(1.03, 1.03);
+  
+}
 

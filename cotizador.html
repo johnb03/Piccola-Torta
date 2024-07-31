@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+    <!-- toasty style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- hoja de stilos -->
     <link rel="stylesheet" href="./src/output.css">
     <!-- seo tag -->
@@ -20,146 +22,134 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <!-- scripts-->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script defer src="/js/app.js" type=""></script>
     <!-- titulo -->
     <title>Piccola Torta </title>
 </head>
-
-<body id="cotizador" class=" bg-gradientBackG flex justify-center items-center  min-h-[100vh] ">
-
-    <!-- contenedor -->
-    <div
-        class=" overflow-hidden container md:w-4/12 min-w-[320px] pt-7 pl-1 pr-1  rounded-xl text-center  bg-whiteD shadow-[9px_9px_0px_rgba(0,0,0,1)] ">
+<body  class=" bg-gradientBackG ">
+    
+            <div id="cotizador" class=" bg-gradientBackG flex justify-center items-center  min-h-[100vh] ">
+        
+        <!-- contenedor -->
+        <div
+        class=" overflow-hidden   container md:w-4/12 min-w-[300px] pt-7 pl-1 pr-1 
+         rounded-xl text-center  bg-whiteD shadow-[9px_9px_0px_rgba(0,0,0,1)] ">
+         <div class="w-36 m-auto">
+            <a class="flex justify-center"  href="#index.html"><img src="/public/image/logo-nuevo-negro.svg" alt="logo" class="w-[60%] h-auto" > </a>
+        </div>
         <header class="text-2xl font-bold  ">Organiza tu presupuesto</header>
-        <!-- barra de progreso -->
-        <div class="progress-bar">
-            <div class="paso">
-                <p>Datos</p>
-                <div class="num  "><span>1</span></div>
-                <div class="check"><box-icon name='check'></box-icon></div>
-            </div>
-            <div class="paso">
-                <p>Personas</p>
-                <div class="num"><span>2</span></div>
-                <div class="check"><box-icon name='check'></box-icon></div>
-            </div>
-            <div class="paso">
-                <p>Productos</p>
-                <div class="num"><span>3</span></div>
-                <div class="check"><box-icon name='check'></box-icon></div>
-            </div>
-            <div class="paso">
-                <p>Enviar</p>
-                <div class="num before:hidden after:hidden"><span>4</span></div>
-                <div class="check"><box-icon name='check'></box-icon></div>
-            </div>
-        </div>
+        <!-- <div class="btns"><button id="logout-btn" class="btn  " type="button">Logout</button></div> -->
+       
+       <!-- barra de progreso -->
+       <div class="progress-bar">
+               <div class="paso">
+                   <p>Datos</p>
+                   <div class="num  "><span>1</span></div>
+                   <div class="check"><box-icon name='check'></box-icon></div>
+               </div>
+               <div class="paso">
+                   <p>Personas</p>
+                   <div class="num"><span>2</span></div>
+                   <div class="check"><box-icon name='check'></box-icon></div>
+               </div>
+               <div class="paso">
+                   <p>Productos</p>
+                   <div class="num"><span>3</span></div>
+                   <div class="check"><box-icon name='check'></box-icon></div>
+               </div>
+               <div class="paso">
+                   <p>Enviar</p>
+                   <div class="num before:hidden after:hidden"><span>4</span></div>
+                   <div class="check"><box-icon name='check'></box-icon></div>
+               </div>
+           </div>
+           <div class="  overflow-hidden  w-full   ">
+               <form id="cliente-info" action="0" class=" flex  w-[400%] ">
+                   <!-- pagina 1 -->
+                   <div class="pagina movPage">
+                       <div class="titulo">Informacion de contacto</div>
+                       
+                       <div class="btns ">
+                           <button id="google-login-btn" type="button"
+                               class=" sigPage btn__delante-1 btn flex flex-row items-center justify-evenly  "> <svg
+                                   xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                   <path fill="currentColor"
+                                       d="M5.266 9.765A7.08 7.08 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582L19.91 3C17.782 1.145 15.055 0 12 0C7.27 0 3.198 2.698 1.24 6.65zm10.774 8.248c-1.09.703-2.474 1.078-4.04 1.078a7.08 7.08 0 0 1-6.723-4.823l-4.04 3.067A11.97 11.97 0 0 0 12 24c2.933 0 5.735-1.043 7.834-3zM19.834 21c2.195-2.048 3.62-5.096 3.62-9c0-.71-.109-1.473-.272-2.182H12v4.637h6.436c-.317 1.559-1.17 2.766-2.395 3.558z" />
+                                   <path fill="currentColor"
+                                       d="M5.277 14.268A7.1 7.1 0 0 1 4.909 12c0-.782.125-1.533.357-2.235L1.24 6.65A11.9 11.9 0 0 0 0 12c0 1.92.445 3.73 1.237 5.335z" />
+                               </svg>Google</button>
+                       </div>
+                       <img class="w-[70%] h-auto m-auto" src="/public/image/personaje .svg" alt="caracther width phone">
+                   </div>
+       
+                   <!-- pagina 2 -->
+                   <div class=" pagina pag-radio ">
+                       <h2 class="titulo">Elige las cantidades</h2>
+                       <div class="flex flex-col items-center ">
+                           <b class="error2 " id="error-personas"></b>
+                           <p id="error-personas">Cuantas Personas? </p>
+                           <input id="cant-personas" class="mt-3 mb-3 ml-2 w-20   text-center border-solid border-2 border-black" placeholder="000"
+                               type="number" min="1" max="1000" name="cantidad-personas">
+                       </div>
+                       <p class="Sub__titles">Cuantas unidades por persona?</p>
+                       <div class="div-radio ">
+                           <label class="numero" for="">3</label>
+                           <input id="r1" type="radio" value="3" name="unidades">
+                           <label class="numero" for="">4</label>
+                           <input id="r2" type="radio" value="4" name="unidades">
+                       </div>
+                       <p>Platos o bandejas elige una opcion</p>
+                       <div class="div-radio">
+                           <label for="">Platos</label>
+                           <input id="r3" type="radio" value="platos" name="envase">
+                           <label for="">Bandejas</label>
+                           <input id="r4" type="radio" value="bandejas" name="envase">
+                       </div>
+                       <div class="btns">
+                           <button class="btn adelante__pag2" type="button">Next</button>
+                       </div>
+                   </div>
+                   <!-- pagina 3 -->
+                   <div class="pagina w-380">
+                       <h2 id="title-seleccion">Selecciona entre las <span>Picaderas</span> Frias y calientes</h2>
+                       <div id="box-items"
+                           class="  flex flex-wrap flex-col gap-4  justify-center m-auto overflow-x-auto p-3">
+                       </div>
+                       <div class="btns">
+                           <button class="btn atras__pag2 btn " type="button">Back</button>
+                           <button class="btn adelante__pag4 btn" type="button">Next</button>
+                       </div>
+                   </div>
+                   <!-- pagina  4 -->
+                   <div class="pagina  flex flex-col  gap-2 ">
+                       <h2 class="titulo">Felicidades</h2>
+                       <p class="text-2xl">Has creado tu presupuesto</p>
 
-        <div class=" overflow-hidden  w-full  border-solid boder-black border-2 ">
-            <form id="cliente-info" action="0" class=" flex  w-[400%] ">
+                       <div id="datos-finales" class="flex flex-col  pl-4  gap-2 uppercase">
 
-                <!-- pagina 1 -->
-                <div class="pagina movPage">
-                    <div class="titulo">Informacion de contacto</div>
-                    <div class="grupo">
-                        <label for="">Nombre: <b class="error " id="nombre-error"></b></label>
-                        <input class="inputText " id="nombre" type="text" placeholder="Nombre">
-                    </div>
-                    <div class="grupo">
-                        <label for="">Apellido: <b class="error " id="apellido-error"></b></label>
-                        <input class="inputText" id="apellido" type="text" placeholder="Apellido">
-                    </div>
-                    <div class="grupo">
-                        <label for="">E-mail: <b class="error" id="email-error"></b></label>
-                        <input class="inputText" id="email" type="email" placeholder="E-mail">
-                    </div>
-                    <div class="grupo">
-                        <label for="">numero: <b class="error" id="numero-error"></b></label>
-                        <input class="inputText" id="numero" type="tel" placeholder="809-000-000"
-                            pattern="/.* [0-9]{3}-[0-9]{3}-[0-9]{4} .*/">
-                    </div>
-                    <div class="grupo">
-                        <label for="">Fecha de Nacimiento <b class="error " id="fechaNac-error"></b> </label>
-                        <input class="inputText" type="date" id="fechaNac" min="2006-12-31" value="2006-01-01" required>
-                    </div>
-                    <div class="btns ">
-                        <button type="submit" class=" sigPage btn "> Siguiente</button>
-                    </div>
-                </div>
+                           <p class="font-semibold" id="result-cantidad"></p>
+                           <p class="font-semibold" id="result-envases"></p>
+                           <div class=""  id="result-bocadillos"> </div>
+                           <p  class="text-xl font-semibold text-primaryColor" id="total"></p>
 
-
-                <!-- pagina 2 -->
-                <div class=" pagina pag-radio ">
-                    <h2 class="titulo">Elige las cantidades</h2>
-                    <div class="flex flex-col items-center ">
-                        <b class="error2 " id="error-personas"></b>
-                        <p id="error-personas">Cuantas Personas? </p>
-                        <input id="cant-personas" class="mt-3 mb-3 ml-2 w-20    border-solid border-2 border-black"
-                            type="number" min="1" max="1000" name="cantidad-personas">
-                    </div>
-
-                    <p class="Sub__titles">Cuantas unidades por persona?</p>
-                    <div class="div-radio ">
-                        <label class="numero" for="">3</label>
-                        <input id="r1" type="radio" value="3" name="unidades">
-                        <label class="numero" for="">4</label>
-                        <input id="r2" type="radio" value="4" name="unidades">
-                    </div>
-
-                    <p>Platos o bandejas elige una opcion</p>
-
-                    <div class="div-radio">
-                        <label for="">Platos</label>
-                        <input id="r3" type="radio" value="platos" name="envase">
-                        <label for="">Bandejas</label>
-                        <input id="r4" type="radio" value="bandejas" name="envase">
-                    </div>
-
-                    <div class="btns">
-                        <button class="btn atras__pag1  " type="button">Back</button>
-                        <button class="btn adelante__pag2" type="submit">Next</button>
-                    </div>
-                </div>
-
-
-                <!-- pagina 3 -->
-                <div class="pagina w-380">
-                    <h2 id="title-seleccion">Selecciona entre las <span>Picaderas</span> Frias y calientes</h2>
-
-                    <div id="box-items"
-                        class="  flex flex-wrap flex-col gap-4  justify-center m-auto overflow-x-auto p-3">
-                    </div>
-
-                    <div class="btns">
-                        <button class="btn atras__pag2 btn " type="button">Back</button>
-                        <button class="btn adelante__pag4 btn" type="button">Next</button>
-                    </div>
-                </div>
-
-                <!-- pagina  4 -->
-                <div class="pagina  flex flex-col  gap-2 ">
-                    <h2 class="titulo">Felicidades</h2>
-                    <p class="text-2xl">Has creado tu presupuesto</p>
-
-                    <div id="datos-finales" class="flex flex-col  p-3">
-                        <p id="result-cantidad"></p>
-                        <p id="result-envases"></p>
-                        <div id="result-bocadillos"> </div>
-                        <p id="total"></p>
-                        <div>
-
-                            <h3>Enviar Presupuesto?</h3>
-                            <div class="btns">
-                                <button class="btn atras__pag3 " type="button">Back</button>
-                                <button class="btn  enviar" type="submit">Enviar</button>
+                           <div>
+                               <h3 class="text-primaryColor">Enviar Presupuesto?</h3>
                             </div>
-                        </div>
-                    </div>
 
-            </form>
-        </div>
-    </div>
+                        </div>
+                        <div class="btns">
+                            <button class="btn atras__pag3 " type="button">Back</button>
+                            <button id="logout-btn" class="btn  enviar" type="button">Enviar</button>
+                        </div>
+               </form>
+           </div>
+       </div>
+   </div>
+    <!-- main js -->
+    <script type="module" src="/main.js"></script>
+    <!-- alert finish -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- toasty -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

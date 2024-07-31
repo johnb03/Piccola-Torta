@@ -20,68 +20,85 @@
     <link rel="shortcut icon" href="/public/image/favicon.ico" type="image/x-icon">
     <!-- scripts-->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script defer src="" type=""></script>
     <!-- titulo -->
     <title>Piccola Torta </title>
 </head>
 
-<body id="index " class="bg-gradientBackG">
+<body id="index " class="bg-whiteD">
 
-    <!-- header nav -->
-    <header class=" col-start-1 col-end-6 max-h-32 ">
-        <a class="md:hidden " href="#"><img class="w-[50%] h-auto m-auto" src="/public/image/logo-nav.png" alt="logo">
-            </acl>
-            <nav id="#index" class="hidden   md:flex p-2 pt-3  justify-between items-center  ">
+    <!-- Responsive grid layout -->
+    <div class=" cards  grid   p-4 xl:max-w-[85%]   gap-4   min-h-screen 
+    xl:grid-cols-6 xl:auto-rows-auto   xl:m-auto ">
+
+        <!-- header nav -->
+        <header class="w-full xl:row-start-1 xl:col-span-6">
+            <nav id="#index" class=" h-14  flex justify-between items-center  p-2 pt-2   ">
                 <div class="w-36 ">
-                    <a href="#"><img src="/public/image/logo-nav.png" alt="logo" class=""> </a>
+                    <a href="#"><img class="w-[95%] aspect-video" src="/public/image/logo-nuevo-negro.svg" alt="logo"
+                            class=""> </a>
                 </div>
-                <ul class=" flex gap-4 text-whiteD ">
-                    <!-- <li><a href="#" class="links-hover font-semibold  p-2 rounded-md">Inicio</a></li>
-                    <li><a href="#" class="links-hover font-semibold   p-2 rounded-md">Cotizador</a></li>
-                    <li><a href="#" class="links-hover font-semibold   p-2 rounded-md">Servicios</a></li> -->
-                </ul>
-                <button class="border-solid border-[1px] border-whiteD rounded-xl text-whiteD p-2 buttonHover">
-                    <a target="_blank"  href="https://wa.link/kkd05c" >contactanos!</a>
+                <button
+                    class="border-solid border-[1px] border-black rounded-xl text-black p-2 max-h-[40px] buttonHover  text-[.7rem] ">
+                    <a target="_blank" href="https://wa.link/kkd05c">contactanos!</a>
                 </button>
             </nav>
-    </header>
+        </header>
 
-    <!-- grid start -->
-    <section class="  flex h-screen w-full items-center justify-center md:p-6 p-2  ">
-        <div class="hero-grid bg-whiteD ">
-  <!-- hero -->
-         <div class="  bg-primaryColor cards-hero md:col-span-4 md:row-span-3 col-span-6 p-3 row-span-6  gap-2  
-         flex flex-col justify-evenly">
-         
-                  <div class="flex md:text-left md:flex-row flex-col  ">
-                        <div class="md:h-72 flex flex-col gap-3 justify-center">
-                            <h1 class="md:textClamp leading-10   text-2xl text-whiteD">Tus <span class="text-secondDaryColor"> Picaderas</span> para  eventos</h1>
-                            <p class="text-[1.3rem] leading-6  text-whiteD">El cotizador de Piccola Torta te ahorra tiempo creado facilmente el presupuesto de tu actividad. </p>
-                        </div>
-                        <div class=" md:w-72 md:h-auto w-40 h-40 flex justify-center"> 
-                            <img class="shadow-realist" src="/public/image/mokup-hero.svg" alt="">  
-                        </div>
-                    </div>
-                    <ul class="text-[1rem] text-left text-whiteD w-[300px] ">
-                        <li class=" mb-2">🥞picaderas para cumpleaños</li>
-                        <li class="mb-2 ">🍱picaderas para eventos</li>
-                    </ul>
-                    <button  class="  text-xs w-[150px] h-10 rounded-lg bg-secondDaryColor  shadow-[9px_9px_0px_rgba(0,0,0,1)] uppercase font-semibold "><a href="/cotizador.html">Pruebalo!</a></button>
-                 </div>
 
-            <div class="cards-hero md:row-span-4 md:col-span-2 col-span-6 bg-heroBackground bg-cover bg-center"></div>
-            <div class="cards-hero md:col-span-3 col-span-6 bg-imageDivBG  bg-cover bg-center"></div>
-            <div
-                class="cards-hero   md:col-span-1 col-span-2  max-h-[250px] bg-secondDaryColor flex justify-center items-center 
-                ">
-                <a id="arrow" href="http://"><img  src="/public/image/pixelarticons_arrow-up.svg" alt=""></a>
+        <!-- hero -->
+        <div class=" card  w-full bg-primaryColor p-4 borders-shadows  
+        xl:col-span-4 xl:row-start-2 xl:row-end-3  xl:h-full  
+        xl:flex xl:flex-col  ">
+
+            <div class="xl:flex xl:gap-3 xl:justify-between xl:w-full xl:items-center">
+
+                <div class=" text-center text-whiteD ">
+                    <h1 class=" text-2xl drop-shadow-lg xl:text-6xl xl:text-left  xl:mb-2 text-secondDaryColor">  Picaderas </h1>
+                    <h2 class=" text-2xl drop-shadow-lg xl:text-6xl xl:text-left  xl:mb-3 "> Para
+                        Eventos </h2>
+                    <p class=" text-xs leading-4 drop-shadow-md xl:text-2xl xl:text-left">El cotizador de Piccola Torta te ahorra tiempo creado
+                        facilmente el presupuesto de tu actividad. </p>
+                </div>
+
+                    <img class="w-full aspect-square xl:w-[40%]" class="shadow-realist " src="/public/image/mokup-hero.svg"
+                        alt="phone  image">
             </div>
 
+            <ul class="text-xs text-whiteD drop-shadow-md w-fit  font-light tracking-wide">
+                <li class="mb-2 ">🥞 picaderas para cumpleaños</li>
+                <li class=" mb-2 ">🍱 picaderas Calientes</li>
+            </ul>
+
+            <button
+                class=" w-full  text-xs  h-10 rounded-lg bg-secondDaryColor  shadow-[9px_9px_0px_rgba(0,0,0,1)] uppercase font-semibold 
+                md:w-56 "><a
+                    href="/cotizador.html">Pruebalo!</a></button>
 
         </div>
-    </section>
+
+        <div class=" card  h-40  w-full flex justify-center items-center  borders-shadows  bg-heroBackground bg-cover bg-center
+             xl:col-span-2 xl:h-full  xl:row-span-2">
+        </div>
+
+        <div
+            class="  card  h-40  w-full flex justify-center items-center bg-imageDivBG bg-cover bg-center borders-shadows  
+            xl:col-span-3 xl:h-full">
+
+        </div>
+
+        <div class=" card h w-full bg-primaryColor borders-shadows xl:h-full">
+            
+            <a target="_blank" href="http://">
+            <svg id="arrow"  class="fill-secondDaryColor w-full aspect-square" width="223" height="223" viewBox="0 0 223 223" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M71.0186 144.074L80.7179 153.206L133.735 96.9L143.434 106.033L152.27 96.6483L142.571 87.5156L151.407 78.1312L141.707 68.9986L132.871 78.383L123.172 69.2503L114.336 78.6347L124.035 87.7673L71.0186 144.074ZM95.8004 78.8864L104.637 69.502L114.336 78.6347L105.5 88.019L95.8004 78.8864ZM95.8004 78.8864L86.9643 88.2707L77.265 79.1381L86.1011 69.7537L95.8004 78.8864ZM144.297 124.55L153.133 115.165L143.434 106.033L134.598 115.417L144.297 124.55ZM144.297 124.55L135.461 133.934L145.16 143.067L153.996 133.682L144.297 124.55Z" />
+                </svg>
+                
+            </a>
+        </div>
+
+
+    </div>
 
 </body>
 
 </html>
-

@@ -1,16 +1,17 @@
-const movPage = document.querySelector(".movPage");
-const btn_adelante = document.querySelector(".sigPage ");
-const btn_enviar = document.querySelector(".enviar");
+ export const movPage = document.querySelector(".movPage");
 
-const btn_atras1 = document.querySelector(".atras__pag1 ");
+const btn_enviar = document.querySelector(".enviar");
+//botones de movimiento
+const btnDelante1 = document.querySelector(".btn__delante-1 ")
 const btn_adelante2 = document.querySelector(".adelante__pag2");
 const btn_atras2 = document.querySelector(".atras__pag2");
 const btn_adelante3 = document.querySelector(".adelante__pag4");
 const btn_atras3 = document.querySelector(".atras__pag3");
-const progressText = document.querySelectorAll(".paso p");
-const progresscheck = document.querySelectorAll(".paso .check");
-const num = document.querySelectorAll(".paso .num");
-
+// barra de progreso
+export const progressText = document.querySelectorAll(".paso p");
+export const progresscheck = document.querySelectorAll(".paso .check");
+export const num = document.querySelectorAll(".paso .num");
+// recoleccion de datos
 const datosFinales = document.getElementById("datos-finales");
 
 let max = 4;
@@ -61,90 +62,90 @@ class bocadillos {
 }
 
 let croquetasPollo = new bocadillos(
-  (src = "/public/image/imagenes de Productos/croquetas.jpg"),
+  ( "/public/image/imagenes de Productos/croquetas.jpg"),
   "corquetas",
   "de pollo",
   25
 );
 
 let pastelitosPollo = new bocadillos(
-  (src = "/public/image/imagenes de Productos/pastelitos.jpg"),
+  ( "/public/image/imagenes de Productos/pastelitos.jpg"),
   "Pastelito",
   "de pollo",
   25
 );
 
 let bolitasDeYuca = new bocadillos(
-  (src = "/public/image/imagenes de Productos/Bolitas-de-yuca.jpg"),
+  ( "/public/image/imagenes de Productos/Bolitas-de-yuca.jpg"),
   "Bolitas",
   "de yuca",
   25
 );
 
 let brochetasMixtas = new bocadillos(
-  (src = "/public/image/imagenes de Productos/Brochetas-mixtas.jpg"),
+  ( "/public/image/imagenes de Productos/Brochetas-mixtas.jpg"),
   "Brochetas",
   "Mixtas",
   35
 );
 
 let medallonesDeSalchicha = new bocadillos(
-  (src = "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg"),
+  ( "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg"),
   "Medallones",
   "de salchicha",
   20
 );
 
 let miniAmburguesas = new bocadillos(
-  (src = "/public/image/imagenes de Productos/mini-amburguesas.jpg"),
+  ( "/public/image/imagenes de Productos/mini-amburguesas.jpg"),
   "Mini",
   "Amburguesas"
 );
 
 let miniSandwich = new bocadillos(
-  (src = "/public/image/imagenes de Productos/mini-sandwich.jpg"),
+  ( "/public/image/imagenes de Productos/mini-sandwich.jpg"),
   "Mini",
   "Sandwich",
   25
 );
 
 let miniWraps = new bocadillos(
-  (src = "/public/image/imagenes de Productos/mini-wraps.jpg"),
+  ( "/public/image/imagenes de Productos/mini-wraps.jpg"),
   "Mini",
   "Sandwich",
   25
 );
 
 let empaQuesoCrema = new bocadillos(
-  (src = "/public/image/imagenes de Productos/Empanadillas.jpg"),
+  ( "/public/image/imagenes de Productos/Empanadillas.jpg"),
   "Empanadillas ",
   "de queso crema",
   35
 );
 
 let empaPolloHorneado = new bocadillos(
-  (src = "/public/image/imagenes de Productos/Empanadillas.jpg"),
+  ("/public/image/imagenes de Productos/Empanadillas.jpg"),
   "Empanadillas ",
   "de pollo horneado",
   35
 );
 
 let empaCamarones = new bocadillos(
-  (src = "/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg"),
+  ( "/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg"),
   "Empanadillas ",
   "de Camarones",
   40
 );
 
 let miniHotdogs = new bocadillos(
-  (src = "/public/image/imagenes de Productos/mini-hotdogs.jpg"),
+  ( "/public/image/imagenes de Productos/mini-hotdogs.jpg"),
   "Mini ",
   "Hot-dogs",
   75
 );
 
 let palitosMozarella = new bocadillos(
-  (src = "/public/image/imagenes de Productos/palitos-de-mozarella.jpg"),
+  ( "/public/image/imagenes de Productos/palitos-de-mozarella.jpg"),
   "Palitos ",
   "de mozarella",
   35
@@ -164,34 +165,19 @@ empaQuesoCrema.verInfo();
 miniHotdogs.verInfo();
 palitosMozarella.verInfo();
 
-//botones adelante
-btn_adelante.addEventListener("click", (e) => {
-  e.preventDefault();
 
-  let nombre = document.getElementById("nombre").value;
-  let apellido = document.getElementById("apellido").value;
-  let email = document.getElementById("email").value;
-  let numero = document.getElementById("numero").value;
 
-  if (nombre == "") {
-    document.getElementById("nombre-error").innerHTML = "*Se te olvido 😊*";
-  } else if (apellido == "") {
-    document.getElementById("apellido-error").innerHTML = "*upps😗*";
-  } else if (email == "") {
-    document.getElementById("email-error").innerHTML = "*Se te olvido 😊*";
-  } else if (numero == "") {
-    document.getElementById("numero-error").innerHTML = "*upps😗*";
-  } else {
-    document.getElementById("nombre-error").innerHTML = "";
-    document.getElementById("apellido-error").innerHTML = "";
-    document.getElementById("email-error").innerHTML = "";
-    document.getElementById("numero-error").innerHTML = "";
+//botones
+
+export function buttonProgressCheck () {
     movPage.style.marginLeft = "-25%";
     num[cont - 1].classList.add("active");
     progresscheck[cont - 1].classList.add("active");
-    cont += 1;
-  }
-});
+    cont +=1;
+  
+}
+ 
+
 
 btn_adelante2.addEventListener("click", (e) => {
   e.preventDefault();
@@ -211,7 +197,7 @@ btn_adelante2.addEventListener("click", (e) => {
   } else if (r3 == false && r4 == false) {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
-  } else {
+  } else  {
     movPage.style.marginLeft = "-50%";
     num[cont - 1].classList.add("active");
     progresscheck[cont - 1].classList.add("active");
@@ -338,17 +324,10 @@ document.addEventListener("change", function (event) {
   }
 });
 
-//obtenert los input
 
 //botones atras----------------------------------
-btn_atras1.addEventListener("click", (e) => {
-  e.preventDefault();
 
-  movPage.style.marginLeft = "0%";
-  num[cont - 2].classList.remove("active");
-  progresscheck[cont - 2].classList.remove("active");
-  cont -= 1;
-});
+
 
 btn_atras2.addEventListener("click", (e) => {
   e.preventDefault();
@@ -368,7 +347,12 @@ btn_atras3.addEventListener("click", (e) => {
   cont -= 1;
 });
 
-btn_enviar.addEventListener("click", (e) => {
+btn_enviar.addEventListener("click", () => {
+
+  num[cont - 1].classList.add("active");
+  progresscheck[cont - 1].classList.add("active");
+  cont += 1;
+
   Swal.fire({
     title: "Excelente!",
     text: "Tu presupuesto de ah enviado!",
@@ -380,4 +364,4 @@ btn_enviar.addEventListener("click", (e) => {
   }, 2000);
 });
 
-//
+
