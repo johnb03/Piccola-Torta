@@ -1,8 +1,8 @@
- export const movPage = document.querySelector(".movPage");
+export const movPage = document.querySelector(".movPage");
 
 const btn_enviar = document.querySelector(".enviar");
 //botones de movimiento
-const btnDelante1 = document.querySelector(".btn__delante-1 ")
+const btnDelante1 = document.querySelector(".btn__delante-1 ");
 const btn_adelante2 = document.querySelector(".adelante__pag2");
 const btn_atras2 = document.querySelector(".atras__pag2");
 const btn_adelante3 = document.querySelector(".adelante__pag4");
@@ -14,11 +14,27 @@ export const num = document.querySelectorAll(".paso .num");
 // recoleccion de datos
 const datosFinales = document.getElementById("datos-finales");
 
+// const cardItems = document.getElementsByClassName("cardItem");
+
+// for (let i = 0; i < cardItems.length; i++) {
+//  imageCheked(cardItems[i]);
+
+// }
+
+// function imageCheked(cardItems) {
+//   cardItems.addEventListener("click", ()=>{
+//     console.log("activo");
+//   })
+// }
+
+// imageCheked()
+
 let max = 4;
 let cont = 1;
 
-const r2 = document.getElementById("r2");
 const r1 = document.getElementById("r1");
+const r2 = document.getElementById("r2");
+const r6 = document.getElementById("r6");
 const inputNumber = document.getElementById("cant-personas");
 const boxItems = document.getElementById("box-items");
 
@@ -62,90 +78,91 @@ class bocadillos {
 }
 
 let croquetasPollo = new bocadillos(
-  ( "/public/image/imagenes de Productos/croquetas.jpg"),
+  "/public/image/imagenes de Productos/croquetas.jpg",
   "corquetas",
   "de pollo",
   25
 );
 
 let pastelitosPollo = new bocadillos(
-  ( "/public/image/imagenes de Productos/pastelitos.jpg"),
+  "/public/image/imagenes de Productos/pastelitos.jpg",
   "Pastelito",
   "de pollo",
   25
 );
 
 let bolitasDeYuca = new bocadillos(
-  ( "/public/image/imagenes de Productos/Bolitas-de-yuca.jpg"),
+  "/public/image/imagenes de Productos/Bolitas-de-yuca.jpg",
   "Bolitas",
   "de yuca",
   25
 );
 
 let brochetasMixtas = new bocadillos(
-  ( "/public/image/imagenes de Productos/Brochetas-mixtas.jpg"),
+  "/public/image/imagenes de Productos/Brochetas-mixtas.jpg",
   "Brochetas",
   "Mixtas",
   35
 );
 
 let medallonesDeSalchicha = new bocadillos(
-  ( "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg"),
+  "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg",
   "Medallones",
   "de salchicha",
   20
 );
 
 let miniAmburguesas = new bocadillos(
-  ( "/public/image/imagenes de Productos/mini-amburguesas.jpg"),
+  "/public/image/imagenes de Productos/mini-amburguesas.jpg",
   "Mini",
-  "Amburguesas"
+  "Amburguesas",
+  35
 );
 
 let miniSandwich = new bocadillos(
-  ( "/public/image/imagenes de Productos/mini-sandwich.jpg"),
+  "/public/image/imagenes de Productos/mini-sandwich.jpg",
   "Mini",
   "Sandwich",
   25
 );
 
 let miniWraps = new bocadillos(
-  ( "/public/image/imagenes de Productos/mini-wraps.jpg"),
+  "/public/image/imagenes de Productos/mini-wraps.jpg",
   "Mini",
   "Sandwich",
   25
 );
 
 let empaQuesoCrema = new bocadillos(
-  ( "/public/image/imagenes de Productos/Empanadillas.jpg"),
+  "/public/image/imagenes de Productos/Empanadillas.jpg",
   "Empanadillas ",
   "de queso crema",
   35
 );
 
 let empaPolloHorneado = new bocadillos(
-  ("/public/image/imagenes de Productos/Empanadillas.jpg"),
+  "/public/image/imagenes de Productos/Empanadillas.jpg",
   "Empanadillas ",
   "de pollo horneado",
   35
 );
 
 let empaCamarones = new bocadillos(
-  ( "/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg"),
+  "/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg",
   "Empanadillas ",
   "de Camarones",
   40
 );
 
 let miniHotdogs = new bocadillos(
-  ( "/public/image/imagenes de Productos/mini-hotdogs.jpg"),
+  "/public/image/imagenes de Productos/mini-hotdogs.jpg",
   "Mini ",
   "Hot-dogs",
   75
 );
 
 let palitosMozarella = new bocadillos(
-  ( "/public/image/imagenes de Productos/palitos-de-mozarella.jpg"),
+  "/public/image/imagenes de Productos/palitos-de-mozarella.jpg",
   "Palitos ",
   "de mozarella",
   35
@@ -165,19 +182,41 @@ empaQuesoCrema.verInfo();
 miniHotdogs.verInfo();
 palitosMozarella.verInfo();
 
-
-
 //botones
 
-export function buttonProgressCheck () {
-    movPage.style.marginLeft = "-25%";
-    num[cont - 1].classList.add("active");
-    progresscheck[cont - 1].classList.add("active");
-    cont +=1;
-  
+export function buttonProgressCheck() {
+  movPage.style.marginLeft = "-25%";
+  num[cont - 1].classList.add("active");
+  progresscheck[cont - 1].classList.add("active");
+  cont += 1;
 }
- 
 
+function hiddenRadio() {
+  let r3 = document.getElementById("r3");
+  let r4 = document.getElementById("r4");
+  let hiddenBandeja = document.getElementById("hidden-bandeja");
+
+
+  r3.addEventListener("click", () => {
+
+    if (!hiddenBandeja.classList.contains("hidden")) {
+      hiddenBandeja.classList.add("hidden");
+     
+    } 
+  });
+
+  r4.addEventListener("click", () => {
+      if (r4.checked) {
+      hiddenBandeja.classList.toggle("hidden")
+    }  
+      
+    });
+
+
+
+}
+
+hiddenRadio();
 
 btn_adelante2.addEventListener("click", (e) => {
   e.preventDefault();
@@ -187,17 +226,18 @@ btn_adelante2.addEventListener("click", (e) => {
   let r2 = document.getElementById("r2").checked;
   let r3 = document.getElementById("r3").checked;
   let r4 = document.getElementById("r4").checked;
+  let r6 = document.getElementById("r6").checked;
 
   if (cantPersonas == "0") {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
-  } else if (r1 == false && r2 == false) {
+  } else if (r1 == false && r2 == false &&  r6 == false) {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
-  } else if (r3 == false && r4 == false) {
+  } else if (r3 == false && r4 == false ) {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
-  } else  {
+  } else {
     movPage.style.marginLeft = "-50%";
     num[cont - 1].classList.add("active");
     progresscheck[cont - 1].classList.add("active");
@@ -213,6 +253,9 @@ function unidadesxPer() {
   }
   if (r2.checked) {
     maxItemselect = parseInt(r2.value);
+  }
+  if (r6.checked) {
+    maxItemselect = parseInt(r6.value);
   }
   return maxItemselect;
 }
@@ -324,10 +367,7 @@ document.addEventListener("change", function (event) {
   }
 });
 
-
 //botones atras----------------------------------
-
-
 
 btn_atras2.addEventListener("click", (e) => {
   e.preventDefault();
@@ -348,20 +388,7 @@ btn_atras3.addEventListener("click", (e) => {
 });
 
 btn_enviar.addEventListener("click", () => {
-
   num[cont - 1].classList.add("active");
   progresscheck[cont - 1].classList.add("active");
   cont += 1;
-
-  Swal.fire({
-    title: "Excelente!",
-    text: "Tu presupuesto de ah enviado!",
-    icon: "success",
-  });
-
-  setTimeout(() => {
-    location.reload();
-  }, 2000);
 });
-
-

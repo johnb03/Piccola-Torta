@@ -16,7 +16,7 @@
   p {
     font-family: "Marcellus", serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: bold;
   }
 }
 
@@ -26,6 +26,12 @@ cursor: pointer;
 
 #box-items {
   height: 300px;
+}
+
+/* modal */
+body.swal2-shown > [aria-hidden='true'] {
+  transition: 0.1s filter;
+  filter: blur(3px);
 }
 
 
@@ -42,7 +48,7 @@ cursor: pointer;
 
 /* formulario */
 .progress-bar {
-  @apply flex justify-center m-10 ml-0 mr-0;
+  @apply flex justify-center m-2 ml-0 mr-0;
   .paso {
     @apply text-center w-full relative;
   }
@@ -119,12 +125,12 @@ cursor: pointer;
 }
 
 .pagina {
-  @apply w-1/4 transition-all;
+  @apply w-1/4 h-fit  transition-all;
   .titulo {
     @apply text-center text-[1.3rem] font-semibold;
   }
 
-  span {
+  span p {
     @apply text-secondDaryColor  drop-shadow-sm;
   }
 }
@@ -144,13 +150,13 @@ cursor: pointer;
     @apply text-center text-[1.4rem] font-medium mb-4;
   }
   p {
-    @apply text-xl text-center pl-2;
+    @apply text-[1.1rem] text-center pl-2 font-sora font-normal ;
   }
 
   .div-radio {
-    @apply h-9 w-80 m-3 mb-0 flex items-center justify-center  gap-2;
+    @apply h-9 w-full m-3 mb-5 flex items-center  justify-center  gap-2 ;
     input {
-      @apply w-5;
+      @apply w-5 ;
     }
   }
 
@@ -200,7 +206,7 @@ cursor: pointer;
   }
 
   .cardItem {
-    @apply w-[141px] h-[150px] rounded-lg shadow-[0_30px_50px_-35px_rgba(0,0,0,0.5)] mb-3  hover:cursor-pointer touch-auto;
+    @apply max-w-32 aspect-square rounded-lg shadow-[0_30px_50px_-35px_rgba(0,0,0,0.5)] mb-3  hover:cursor-pointer touch-auto;
   }
 
   .itemMenu {
