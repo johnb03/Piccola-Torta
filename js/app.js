@@ -1,54 +1,110 @@
 export const movPage = document.querySelector(".movPage");
-
 const btn_enviar = document.querySelector(".enviar");
+
 //botones de movimiento
 const btnDelante1 = document.querySelector(".btn__delante-1 ");
 const btn_adelante2 = document.querySelector(".adelante__pag2");
 const btn_atras2 = document.querySelector(".atras__pag2");
 const btn_adelante3 = document.querySelector(".adelante__pag4");
 const btn_atras3 = document.querySelector(".atras__pag3");
+
 // barra de progreso
 export const progressText = document.querySelectorAll(".paso p");
 export const progresscheck = document.querySelectorAll(".paso .check");
 export const num = document.querySelectorAll(".paso .num");
+
 // recoleccion de datos
 const datosFinales = document.getElementById("datos-finales");
-
-// const cardItems = document.getElementsByClassName("cardItem");
-
-// for (let i = 0; i < cardItems.length; i++) {
-//  imageCheked(cardItems[i]);
-
-// }
-
-// function imageCheked(cardItems) {
-//   cardItems.addEventListener("click", ()=>{
-//     console.log("activo");
-//   })
-// }
-
-// imageCheked()
-
-let max = 4;
-let cont = 1;
-
 const r1 = document.getElementById("r1");
 const r2 = document.getElementById("r2");
 const r6 = document.getElementById("r6");
 const inputNumber = document.getElementById("cant-personas");
 const boxItems = document.getElementById("box-items");
 
-// sumatoria final de productos
+const envase1 = document.getElementById("r4");
+const envase2 = document.getElementById("r3");
+
+//variables
+let max = 4;
+let cont = 1;
+
+// Elementos de producto
 const totalElement = document.getElementById("total");
 const resulCantidad = document.getElementById("result-cantidad");
 const resultBocadillos = document.getElementById("result-bocadillos");
 const resultEnvase = document.getElementById("result-envases");
+
 //crear una base de elementos
 function crearDiv(producto) {
   let div = document.createElement("div");
   div.classList.add("div-productos");
   div.innerHTML = producto.info;
   boxItems.append(div);
+}
+
+// validar los input check
+function validarCheckBoxes() {
+  const maxItemselect = unidadesxPer();
+  const itemSelect = boxItems.querySelectorAll(".item-select");
+  const itemCount = Array.from(itemSelect).filter(
+    (checkbox) => checkbox.checked
+  ).length;
+
+  itemSelect.forEach((checkbox) => {
+    if (!checkbox.checked && itemCount >= maxItemselect) {
+      checkbox.disabled = true;
+    } else {
+      checkbox.disabled = false;
+    }
+  });
+}
+
+// escuchar solo los que con check
+document.addEventListener("DOMContentLoaded", () => {
+  const itemSelect = boxItems.querySelectorAll(".item-select");
+  itemSelect.forEach((checkbox) => {
+    checkbox.addEventListener("change", validarCheckBoxes);
+  });
+
+  [r1, r2, r6].forEach((radio) => {
+    radio.addEventListener("change", validarCheckBoxes);
+  });
+});
+
+//ocultra cantidades extra para bandeja
+function hiddenRadio() {
+  let r3 = document.getElementById("r3");
+  let r4 = document.getElementById("r4");
+  let hiddenBandeja = document.getElementById("hidden-bandeja");
+
+  r3.addEventListener("click", () => {
+    if (!hiddenBandeja.classList.contains("hidden")) {
+      hiddenBandeja.classList.add("hidden");
+    }
+  });
+
+  r4.addEventListener("click", () => {
+    if (r4.checked) {
+      hiddenBandeja.classList.toggle("hidden");
+    }
+  });
+}
+
+hiddenRadio();
+
+// obtener el valor de los input Cantidad de unidades
+function unidadesxPer() {
+  let maxItemselect = 3;
+  if (r1.checked) {
+    maxItemselect;
+  }
+  if (r2.checked) {
+    maxItemselect = parseInt(r2.value);
+  }
+  if (r6.checked) {
+    maxItemselect = parseInt(r6.value);
+  }
+  return maxItemselect;
 }
 
 // productos
@@ -67,13 +123,35 @@ class bocadillos {
     </div>
 
     <div class="flex justify-between">
-    <p id="precio" class="font-bold "> $${precio}.00</p>
+    <p id="precio" class="font-bold "> </p>
    <input  class=" aspect-square item-select border-blue-500  w-[18px]" data-nombre="${nombre}" data-precio ="${precio}" type="checkbox" >
     </div> 
     `;
   }
   verInfo() {
     crearDiv(this);
+    this.addClickEvent();
+  }
+  addClickEvent() {
+    const imgElement = document.querySelector(`img[src="${this.imagen}"]`);
+    const checkboxElement =
+      imgElement.nextElementSibling.nextElementSibling.querySelector(
+        'input[type="checkbox"]'
+      );
+
+    imgElement.addEventListener("click", () => {
+      checkboxElement.checked = !checkboxElement.checked;
+
+      const maxItemselect = unidadesxPer();
+      const itemCount = Array.from(
+        boxItems.querySelectorAll(".item-select")
+      ).filter((checkbox) => checkbox.checked).length;
+
+      if (itemCount > maxItemselect) {
+        checkboxElement.checked = false;
+        validarCheckBoxes();
+      }
+    });
   }
 }
 
@@ -191,33 +269,6 @@ export function buttonProgressCheck() {
   cont += 1;
 }
 
-function hiddenRadio() {
-  let r3 = document.getElementById("r3");
-  let r4 = document.getElementById("r4");
-  let hiddenBandeja = document.getElementById("hidden-bandeja");
-
-
-  r3.addEventListener("click", () => {
-
-    if (!hiddenBandeja.classList.contains("hidden")) {
-      hiddenBandeja.classList.add("hidden");
-     
-    } 
-  });
-
-  r4.addEventListener("click", () => {
-      if (r4.checked) {
-      hiddenBandeja.classList.toggle("hidden")
-    }  
-      
-    });
-
-
-
-}
-
-hiddenRadio();
-
 btn_adelante2.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -231,10 +282,10 @@ btn_adelante2.addEventListener("click", (e) => {
   if (cantPersonas == "0") {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
-  } else if (r1 == false && r2 == false &&  r6 == false) {
+  } else if (r1 == false && r2 == false && r6 == false) {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
-  } else if (r3 == false && r4 == false ) {
+  } else if (r3 == false && r4 == false) {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
   } else {
@@ -245,51 +296,7 @@ btn_adelante2.addEventListener("click", (e) => {
   }
 });
 
-// obtener el valor de los input Cantidad de unidades
-function unidadesxPer() {
-  let maxItemselect = 3;
-  if (r1.checked) {
-    maxItemselect;
-  }
-  if (r2.checked) {
-    maxItemselect = parseInt(r2.value);
-  }
-  if (r6.checked) {
-    maxItemselect = parseInt(r6.value);
-  }
-  return maxItemselect;
-}
-
-// validar los input check
-function validarCheckBoxes() {
-  const maxItemselect = unidadesxPer();
-  const itemSelect = boxItems.querySelectorAll(".item-select");
-  const itemCount = Array.from(itemSelect).filter(
-    (checkbox) => checkbox.checked
-  ).length;
-  itemSelect.forEach((checkbox) => {
-    if (!checkbox.checked && itemCount >= maxItemselect) {
-      checkbox.disabled = true;
-    } else {
-      checkbox.disabled = false;
-    }
-  });
-}
-
-// escuchar solo los que con check
-document.addEventListener("DOMContentLoaded", () => {
-  const itemSelect = boxItems.querySelectorAll(".item-select");
-  itemSelect.forEach((checkbox) => {
-    checkbox.addEventListener("change", validarCheckBoxes);
-  });
-
-  r1.addEventListener("change", validarCheckBoxes);
-  r2.addEventListener("change", validarCheckBoxes);
-});
-
-// unidadesxPer();
-
-btn_adelante3.addEventListener("click", (e) => {
+btn_adelante3.addEventListener("click", () => {
   const maxItemselect = unidadesxPer();
   const itemSelect = document.querySelectorAll(".item-select");
   const itemCount = Array.from(itemSelect).filter(
@@ -311,20 +318,31 @@ btn_adelante3.addEventListener("click", (e) => {
 });
 
 //seleccion de envases
+
 function envases() {
-  const envase1 = document.getElementById("r4");
-  const envase2 = document.getElementById("r3");
+ 
   if (envase1.checked) {
-    return envase1.value;
+    return envase1.value ;
   }
   if (envase2.checked) {
-    return envase2.value;
+    return envase2.value ;
   }
 }
 
-// calculo total del presupuesto
+// precio de envases
+function precioXEnvase(e) {
+  let attributePrecio1 = e.getAttribute("data-precio");
+
+  let precioBandeja = parseInt(attributePrecio1);
+
+  return precioBandeja;
+}
+
+// --------------------------------------------------------------------------------------------
+// calculo total del presupuesto sumatoria final
 function calcularTotal() {
   const cantidad = parseFloat(inputNumber.value);
+  
   resultEnvase.textContent = ` Envase elegido: ${envases()}`;
   resulCantidad.textContent = `Excelente para ${cantidad} personas`;
 
@@ -336,20 +354,38 @@ function calcularTotal() {
   selectedItems.forEach((item) => {
     const itemName = item.getAttribute("data-nombre");
     const itemPrice = parseFloat(item.getAttribute("data-precio"));
+    let precioDeEnvases;
 
-    const totalItemPrice = itemPrice * cantidad;
+    if (envase1.checked) {
+    precioDeEnvases = cantidad * precioXEnvase(envase1)
+    } else if (envase2.checked) {
+      precioDeEnvases = (cantidad * precioXEnvase(envase2)) / 6
+    } 
+    
 
+    function precioSubtotal() {
+      const totalItemPrice = ( itemPrice * cantidad ) + precioDeEnvases  ;
+      
+      const subTotal =   totalItemPrice *  49/100;
+
+      return  subTotal + totalItemPrice;
+
+     }
+    
+    
     let itemResult = document.createElement("p");
     itemResult.textContent = `${itemName} : cantidad  ${cantidad}`;
     resultBocadillos.appendChild(itemResult);
 
-    total += totalItemPrice;
+    total += precioSubtotal();
   });
 
-  totalElement.textContent = ` Total : $${total.toFixed(2)}`;
+  let totalFijo = total.toFixed(2);
+  totalElement.textContent = ` Sub total : $  ${totalFijo}`;
 }
 
 let seleccionados = [];
+
 function obtenerSeleccionados(checkbox) {
   let nombre = checkbox.getAttribute("data-nombre");
   let precio = checkbox.getAttribute("data-precio");
@@ -392,3 +428,5 @@ btn_enviar.addEventListener("click", () => {
   progresscheck[cont - 1].classList.add("active");
   cont += 1;
 });
+
+// -------------------------------------------------------------------------------------------
