@@ -1,4 +1,4 @@
-
+import { EnviarWhatsapp} from "./whatsaapMensaje.js"
  export function modal  () {
  const steps = ['1', '2', '3']
 const Queue = Swal.mixin({
@@ -17,55 +17,25 @@ const Queue = Swal.mixin({
   })
   await Queue.fire({
     title: 'Para nosotros es importante la satisfacción de nuestros clientes',
-    text:' por eso, debes agendar minimo 48 horas a 72 Horas dependiendo la cantidad, para poder manejar la disponibilidad del producto a elegir. ',
+    text:' por eso, debes agendar como maximo  48 horas  Horas antes de la actividad dependiendo la cantidad, esto con el fin de poder organizarnos y entregale a tiempo. ',
     currentProgressStep: 1,
   })
 
   await Queue.fire({
     title: 'Confirma tu cotizacion',
-    text: ' atravez del boton contactanos llegaras a nuestro whatsapp ',
+    text: ' Atravez de whatsapp confirmaremos tu pedido ya hallas realizado el pago correspondiente ',
     currentProgressStep: 2,
     confirmButtonText: 'OK',
   })
 
+  EnviarWhatsapp()
   window.location.href = window.location.href= "index.html";
+  
 })()
 }
 
 
-// window.addEventListener("load", ()=>{
-  
-
-//   const steps = ['1', '2', '3']
-//   const Queue = Swal.mixin({
-//     progressSteps: steps,
-//     confirmButtonText: 'Next >',
-//     // optional classes to avoid backdrop blinking between steps
-//     showClass: { backdrop: 'swal2-noanimation' },
-//     hideClass: { backdrop: 'swal2-noanimation' },
-//   })
-  
-//   ;(async () => {
-//     await Queue.fire({ 
-//       title: 'Primero',
-//       text:'Es importante que sepas! , que para poder agendar tu orden debes realizar el pago del mismo ya sea efectivo o tarjeta',
-//       currentProgressStep: 0,
-//     })
-//     await Queue.fire({
-//       title: 'Segundo',
-//       text:'Para nosotros es importante la satisfacción de nuestros clientes por eso, debes agendar minimo 48 horas a 72 Horas dependiendo la cantidad, para poder manejar la disponibilidad del producto a elegir. ',
-//       currentProgressStep: 1,
-//     })
-
-//     await Queue.fire({
-//       title: 'Tercero',
-//       text: ' costo de delivery es adicional.',
-//       currentProgressStep: 2,
-//       confirmButtonText: 'OK',
-//     })
-//   })()
 
 
-// })
 
 

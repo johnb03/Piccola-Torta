@@ -1,3 +1,4 @@
+
 export const movPage = document.querySelector(".movPage");
 const btn_enviar = document.querySelector(".enviar");
 
@@ -124,7 +125,7 @@ class bocadillos {
 
     <div class="flex justify-between">
     <p id="precio" class="font-bold "> </p>
-   <input  class=" aspect-square item-select border-blue-500  w-[18px]" data-nombre="${nombre}" data-precio ="${precio}" type="checkbox" >
+   <input  class=" aspect-square item-select border-blue-500  w-[18px]" data-nombre="${nombre} ${subProducto}" data-precio ="${precio}" type="checkbox" >
     </div> 
     `;
   }
@@ -162,6 +163,27 @@ let croquetasPollo = new bocadillos(
   25
 );
 
+let QuipeDepollo = new bocadillos(
+  "/public/image/imagenes de Productos/",
+  "Quipe",
+  "de pollo",
+  25
+);
+
+let QuipeDeQueso = new bocadillos(
+  "/public/image/imagenes de Productos/quipe-de-queso-1.jpg",
+  "Quipe",
+  "de queso",
+  25
+);
+
+let QuipeDeRes = new bocadillos(
+  "/public/image/imagenes de Productos/Quipe de res (1).jpg",
+  "Quipe",
+  "de res",
+  30
+);
+
 let pastelitosPollo = new bocadillos(
   "/public/image/imagenes de Productos/pastelitos.jpg",
   "Pastelito",
@@ -185,7 +207,7 @@ let brochetasMixtas = new bocadillos(
 
 let medallonesDeSalchicha = new bocadillos(
   "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg",
-  "Medallones",
+  "Medallones ",
   "de salchicha",
   20
 );
@@ -247,6 +269,7 @@ let palitosMozarella = new bocadillos(
 );
 
 croquetasPollo.verInfo();
+QuipeDeRes.verInfo();
 pastelitosPollo.verInfo();
 bolitasDeYuca.verInfo();
 brochetasMixtas.verInfo();
@@ -279,7 +302,10 @@ btn_adelante2.addEventListener("click", (e) => {
   let r4 = document.getElementById("r4").checked;
   let r6 = document.getElementById("r6").checked;
 
-  if (cantPersonas == "0") {
+  if(cantPersonas <= "5"){
+    document.getElementById("error-personas").innerHTML =
+    "*6 personas en adelante😗*";
+  } else if (cantPersonas == "0") {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
   } else if (r1 == false && r2 == false && r6 == false) {
@@ -310,6 +336,8 @@ btn_adelante3.addEventListener("click", () => {
     cont += 1;
 
     calcularTotal();
+  
+    
   } else {
     let errorSelecion = document.getElementById("title-seleccion");
     errorSelecion.classList.add("error3");
@@ -340,11 +368,11 @@ function precioXEnvase(e) {
 
 // --------------------------------------------------------------------------------------------
 // calculo total del presupuesto sumatoria final
-function calcularTotal() {
+ function calcularTotal() {
   const cantidad = parseFloat(inputNumber.value);
   
-  resultEnvase.textContent = ` Envase elegido: ${envases()}`;
-  resulCantidad.textContent = `Excelente para ${cantidad} personas`;
+  resulCantidad.textContent = `Picadera para ${cantidad} personas ,`;
+  resultEnvase.textContent = ` Envase elegido: ${envases()} ,`;
 
   let selectedItems = document.querySelectorAll(".item-select:checked");
   resultBocadillos.innerHTML = ""; //limpia resultados anteriores
@@ -374,7 +402,7 @@ function calcularTotal() {
     
     
     let itemResult = document.createElement("p");
-    itemResult.textContent = `${itemName} : cantidad  ${cantidad}`;
+    itemResult.textContent = `${itemName} : Unidades ${cantidad}, `;
     resultBocadillos.appendChild(itemResult);
 
     total += precioSubtotal();
