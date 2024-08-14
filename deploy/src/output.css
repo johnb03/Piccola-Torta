@@ -761,10 +761,6 @@ p {
   margin-top: 1.5rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -831,18 +827,6 @@ p {
 
 .h-full {
   height: 100%;
-}
-
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .max-h-32 {
@@ -912,10 +896,6 @@ p {
 
 .w-full {
   width: 100%;
-}
-
-.w-9 {
-  width: 2.25rem;
 }
 
 .min-w-\[300px\] {
@@ -1081,11 +1061,11 @@ p {
 }
 
 .bg-heroBackground {
-  background-image: url('/public/image/hero-image.png') ;
+  background-image: url('/deploy/public/image/hero-image.png') ;
 }
 
 .bg-imageDivBG {
-  background-image: url(/public/image/picaderas.jpg);
+  background-image: url(/deploy/public/image/picaderas.jpg);
 }
 
 .bg-cover {
@@ -1192,10 +1172,6 @@ p {
   line-height: 1rem;
 }
 
-.leading-10 {
-  line-height: 2.5rem;
-}
-
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -1232,26 +1208,6 @@ p {
 .text-whiteD {
   --tw-text-opacity: 1;
   color: rgb(249 249 249 / var(--tw-text-opacity));
-}
-
-.text-transparent {
-  color: transparent;
-}
-
-.text-opacity-20 {
-  --tw-text-opacity: 0.2;
-}
-
-.text-opacity-100 {
-  --tw-text-opacity: 1;
-}
-
-.opacity-10 {
-  opacity: 0.1;
-}
-
-.opacity-0 {
-  opacity: 0;
 }
 
 .shadow-\[9px_9px_0px_rgba\(0\2c 0\2c 0\2c 1\)\] {
@@ -1730,11 +1686,6 @@ body.swal2-shown > [aria-hidden='true'] {
   line-height: 1.25rem;
 }
 
-.backdrop\:sepia::backdrop {
-  --tw-sepia: sepia(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .before\:hidden::before {
   content: var(--tw-content);
   display: none;
@@ -1810,10 +1761,6 @@ body.swal2-shown > [aria-hidden='true'] {
   .md\:justify-between {
     justify-content: space-between;
   }
-
-  .\*\:md\:hidden > * {
-    display: none;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -1861,16 +1808,8 @@ body.swal2-shown > [aria-hidden='true'] {
     margin-bottom: 0.75rem;
   }
 
-  .xl\:block {
-    display: block;
-  }
-
   .xl\:flex {
     display: flex;
-  }
-
-  .xl\:hidden {
-    display: none;
   }
 
   .xl\:h-full {

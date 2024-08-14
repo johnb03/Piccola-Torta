@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "run": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "run": "npx tailwindcss -i ./deploy/src/input.css -o ./deploy/src/output.css --watch"
   },
   "devDependencies": {
     "@iconify/tailwind": "^1.1.1",

@@ -7,13 +7,14 @@
     <!-- toasty style -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- hoja de stilos -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="/deploy/src/output.css">
     <!-- seo tag -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Picaderas listas para tus actividades 100% dominicanas">
-    <meta name="keywords" content="pastelitos, picaderas, quipes,  empanadas, actividades, cocina dominicana">
+    <meta name="description" content="Picadera  para  actividades 100% dominicanas">
+    <meta name="keywords"
+        content="Picadera, Picadera Dominicana, Picadera para actividades,  picadera para fiestas , picadera para fiestas infantiles, picadera para cumpleaños">
     <meta name="autor" content="JOB">
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
     <!-- scripts-->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <!-- titulo -->
-    <title>Piccola Torta </title>
+    <title>Piccola Torta Cotizador de picadera </title>
 </head>
 
 <body class=" bg-gradientBackG ">
@@ -36,18 +37,17 @@
         <div class=" overflow-hidden   container md:w-4/12 min-w-[300px]  pl-1 pr-1
          rounded-xl text-center  bg-whiteD shadow-[9px_9px_0px_rgba(0,0,0,1)] md:h-[650px] ">
             <div class="w-36 m-auto">
-                <a class="flex justify-center" href="/index.html"><img src="/public/image/logo-nuevo-negro.svg"
+                <a class="flex justify-center" href="/index.html"><img src="/deploy/public/image/logo-nuevo-negro.svg"
                         alt="logo" class="w-[60%] h-auto"> </a>
             </div>
             <header>
                 <section>
-                    
+
                 </section>
 
                 <h2 class="text-2xl font-bold">Organiza tu presupuesto</h2>
 
             </header>
-            <!-- <div class="btns"><button id="logout-btn" class="btn  " type="button">Logout</button></div> -->
 
             <!-- barra de progreso -->
             <div class="progress-bar">
@@ -75,7 +75,7 @@
 
             <div class=" w-full overflow-hidden   ">
 
-                <form id="cliente-info" action="0" class=" flex  w-[400%] " netlify>
+                <form id="cliente-info" action="0" class=" flex  w-[400%] ">
                     <!-- pagina 1 -->
                     <div class="pagina movPage">
                         <div class="titulo">Informacion de contacto</div>
@@ -88,9 +88,11 @@
                                         d="M5.266 9.765A7.08 7.08 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582L19.91 3C17.782 1.145 15.055 0 12 0C7.27 0 3.198 2.698 1.24 6.65zm10.774 8.248c-1.09.703-2.474 1.078-4.04 1.078a7.08 7.08 0 0 1-6.723-4.823l-4.04 3.067A11.97 11.97 0 0 0 12 24c2.933 0 5.735-1.043 7.834-3zM19.834 21c2.195-2.048 3.62-5.096 3.62-9c0-.71-.109-1.473-.272-2.182H12v4.637h6.436c-.317 1.559-1.17 2.766-2.395 3.558z" />
                                     <path fill="currentColor"
                                         d="M5.277 14.268A7.1 7.1 0 0 1 4.909 12c0-.782.125-1.533.357-2.235L1.24 6.65A11.9 11.9 0 0 0 0 12c0 1.92.445 3.73 1.237 5.335z" />
-                                </svg>Google</button>
+                                </svg>Google
+                            </button>
                         </div>
-                        <img class="w-[70%] h-auto m-auto" src="/public/image/personaje .svg"
+
+                        <img class="w-[70%] h-auto m-auto" src="/deploy/public/image/personaje .svg"
                             alt="caracther width phone">
                     </div>
 
@@ -120,9 +122,9 @@
                             <div>
                                 <span id="hidden-platos" class="">
                                     <label class="numero" for="">3</label>
-                                    <input id="r1" type="radio" value="3" name="unidades" >
+                                    <input id="r1" type="radio" value="3" name="unidades">
                                     <label class="numero" for="">4</label>
-                                    <input id="r2" type="radio" value="4" name="unidades" >
+                                    <input id="r2" type="radio" value="4" name="unidades">
                                 </span>
 
                                 <span id="hidden-bandeja" class=" hidden">
@@ -152,7 +154,7 @@
                     <div class="pagina  flex flex-col  gap-2 ">
                         <h2 class="titulo">Todo Listo👌</h2>
                         <p class="text-2xl">Has creado tu presupuesto</p>
-                        <button >  ⬇️  Descargalo </button>
+                        <button> ⬇️ Descargalo </button>
 
                         <div id="datos-finales" class="flex flex-col  pl-4  gap-2 uppercase">
 
@@ -166,7 +168,7 @@
                             </div>
 
                         </div>
-                        
+
                         <div class="btns">
                             <button class="btn atras__pag3 " type="button">Atras</button>
                             <button id="logout-btn" class="btn  enviar" type="button">Enviar</button>
@@ -176,7 +178,7 @@
         </div>
     </div>
     <!-- main js -->
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/deploy/main.js"></script>
     <!-- alerts modal -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>

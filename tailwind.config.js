@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.html",
+    "./deploy/src/**/*.html",
+    "./deploy/html/**.html",
+    "./deploy/**.html",
     "index.html",
     "js",
     "home.html",
@@ -26,8 +28,8 @@ module.exports = {
     },
     backgroundImage: {
       gradientBackG: "linear-gradient(90deg, #313131,#1B7E7F)",
-      heroBackground: "url('/public/image/hero-image.png') ",
-      imageDivBG: "url(/public/image/picaderas.jpg)",
+      heroBackground: "url('/deploy/public/image/hero-image.png') ",
+      imageDivBG: "url(/deploy/public/image/picaderas.jpg)",
       
     },
   },

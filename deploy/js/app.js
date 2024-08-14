@@ -157,112 +157,112 @@ class bocadillos {
 }
 
 let croquetasPollo = new bocadillos(
-  "/public/image/imagenes de Productos/croquetas.jpg",
+  "/deploy/public/image/imagenes de Productos/croquetas.jpg",
   "corquetas",
   "de pollo",
   25
 );
 
 let QuipeDepollo = new bocadillos(
-  "/public/image/imagenes de Productos/",
+  "/deploy/public/image/imagenes de Productos/",
   "Quipe",
   "de pollo",
   25
 );
 
 let QuipeDeQueso = new bocadillos(
-  "/public/image/imagenes de Productos/quipe-de-queso-1.jpg",
+  "/deploy/public/image/imagenes de Productos/quipe-de-queso-1.jpg",
   "Quipe",
   "de queso",
   25
 );
 
 let QuipeDeRes = new bocadillos(
-  "/public/image/imagenes de Productos/Quipe de res (1).jpg",
+  "/deploy/public/image/imagenes de Productos/Quipe de res (1).jpg",
   "Quipe",
   "de res",
   30
 );
 
 let pastelitosPollo = new bocadillos(
-  "/public/image/imagenes de Productos/pastelitos.jpg",
+  "/deploy/public/image/imagenes de Productos/pastelitos.jpg",
   "Pastelito",
   "de pollo",
   25
 );
 
 let bolitasDeYuca = new bocadillos(
-  "/public/image/imagenes de Productos/Bolitas-de-yuca.jpg",
+  "/deploy/public/image/imagenes de Productos/Bolitas-de-yuca.jpg",
   "Bolitas",
   "de yuca",
   25
 );
 
 let brochetasMixtas = new bocadillos(
-  "/public/image/imagenes de Productos/Brochetas-mixtas.jpg",
+  "/deploy/public/image/imagenes de Productos/Brochetas-mixtas.jpg",
   "Brochetas",
   "Mixtas",
   35
 );
 
 let medallonesDeSalchicha = new bocadillos(
-  "/public/image/imagenes de Productos/Medallones-de-salchicha.jpg",
+  "/deploy/public/image/imagenes de Productos/Medallones-de-salchicha.jpg",
   "Medallones ",
   "de salchicha",
   20
 );
 
 let miniAmburguesas = new bocadillos(
-  "/public/image/imagenes de Productos/mini-amburguesas.jpg",
+  "/deploy/public/image/imagenes de Productos/mini-amburguesas.jpg",
   "Mini",
   "Amburguesas",
   35
 );
 
 let miniSandwich = new bocadillos(
-  "/public/image/imagenes de Productos/mini-sandwich.jpg",
+  "/deploy/public/image/imagenes de Productos/mini-sandwich.jpg",
   "Mini",
   "Sandwich",
   25
 );
 
 let miniWraps = new bocadillos(
-  "/public/image/imagenes de Productos/mini-wraps.jpg",
+  "/deploy/public/image/imagenes de Productos/mini-wraps.jpg",
   "Mini",
   "Sandwich",
   25
 );
 
 let empaQuesoCrema = new bocadillos(
-  "/public/image/imagenes de Productos/Empanadillas.jpg",
+  "/deploy/public/image/imagenes de Productos/Empanadillas.jpg",
   "Empanadillas ",
   "de queso crema",
   35
 );
 
 let empaPolloHorneado = new bocadillos(
-  "/public/image/imagenes de Productos/Empanadillas.jpg",
+  "/deploy/public/image/imagenes de Productos/Empanadillas.jpg",
   "Empanadillas ",
   "de pollo horneado",
   35
 );
 
 let empaCamarones = new bocadillos(
-  "/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg",
+  "/deploy/public/image/imagenes de Productos/Empanadillas-de-camarones.jpg",
   "Empanadillas ",
   "de Camarones",
   40
 );
 
 let miniHotdogs = new bocadillos(
-  "/public/image/imagenes de Productos/mini-hotdogs.jpg",
+  "/deploy/public/image/imagenes de Productos/mini-hotdogs.jpg",
   "Mini ",
   "Hot-dogs",
   75
 );
 
 let palitosMozarella = new bocadillos(
-  "/public/image/imagenes de Productos/palitos-de-mozarella.jpg",
+  "/deploy/public/image/imagenes de Productos/palitos-de-mozarella.jpg",
   "Palitos ",
   "de mozarella",
   35
