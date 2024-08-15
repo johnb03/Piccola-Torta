@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
     <!-- favicon -->
-    <link rel="shortcut icon" href="/deploy/public/image/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/image/favicon.ico" type="image/x-icon">
     <!-- scripts-->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <!-- titulo -->
@@ -34,7 +34,7 @@
         <header class="w-full xl:row-start-1 xl:col-span-6">
             <nav id="#index" class=" h-14  flex justify-between items-center  p-2 pt-2   ">
                 <div class="w-36 ">
-                    <a href="#"><img class="w-[95%] aspect-video" src="/deploy/public/image/logo-nuevo-negro.svg" alt="logo"
+                    <a href="#"><img class="w-[95%] aspect-video" src="./public/image/logo-nuevo-negro.svg" alt="logo"
                             class=""> </a>
                 </div>
                 <button
@@ -59,11 +59,11 @@
                     <h2 class=" text-2xl drop-shadow-lg xl:text-6xl xl:text-left  xl:mb-3 "> Para
                         Eventos </h2>
                     <p class=" text-xs leading-4 drop-shadow-md xl:text-2xl xl:text-left">El cotizador de Piccola Torta
-                        te ahorra tiempo creado
+                        te ahorra tiempo creando
                         facilmente el presupuesto de tu actividad. </p>
                 </div>
 
-                <img class="w-full aspect-square xl:w-[40%]" class="shadow-realist " src="/deploy/public/image/mokup-hero.svg"
+                <img class="w-full aspect-square xl:w-[40%]" class="shadow-realist " src="./public/image/mokup-hero.svg"
                     alt="phone  image">
             </div>
 
@@ -73,22 +73,28 @@
             </ul>
 
             <button id="btn-popup" class=" w-full  text-xs  h-10 rounded-lg bg-secondDaryColor  shadow-[9px_9px_0px_rgba(0,0,0,1)] uppercase font-semibold 
-                md:w-56 "><a href="/deploy/html/cotizador.html">Pruebalo!</a>
+                md:w-56 "><a href="./cotizador.html">Pruebalo!</a>
             </button>
 
         </div>
 
-        <div class=" card  h-40  w-full xl:flex justify-center items-center  borders-shadows  bg-heroBackground bg-cover bg-center
+        <div class=" overflow-hidden card  h-40  w-full xl:flex flex-col xl:items-center  xl:justify-between text-center    borders-shadows   bg-primaryColorLight
              xl:col-span-2 xl:h-full  xl:row-span-2 
-             hidden">
+            ">
+            <a href="#">
+                <h2 class="drop-shadow-lg xl:text-6xl text-4xl xl:pt-20 pt-3  text-whiteD tracking-widest">Blog</h2>
+            </a>
+          <img class="w-full aspect-auto" src="./public/image/hero-image.png" alt="chica comiendo">
         </div>
 
-        <div class="  card  h-40  w-full xl:flex justify-center items-center bg-imageDivBG bg-cover bg-center borders-shadows  
-            xl:col-span-3 xl:h-full hidden  ">
+        <div class=" overflow-hidden  card  h-40 xl:max-h-[224px] w-full justify-evenly   xl:flex  xl:items-center  text-center  xl:flex-row flex-col borders-shadows bg-primaryColor  
+            xl:col-span-3 xl:h-full  ">
 
-            <!-- <div class="w-36 h-28 rounded-xl flex justify-center items-center  hover:backdrop-brightness-50 hover:text-whiteD  ">
-                <h2 class="text-2xl drop-shadow-sm tracking-widest tex" >Menu</h2>
-            </div> -->
+                <a href="">
+                    <h2 class="relative text-2xl p-5  tracking-widest drop-shadow-lg xl:text-6xl xl:p-0  text-whiteD pl-3" >Menu  </h2>
+                </a>
+                
+            <img class="w-full aspect-video rounded-full" src="./public/image/picaderas.jpg" alt="picadera">
 
         </div>
 
@@ -105,7 +111,7 @@
 
 
     </div>
-    <script type="module" src="/deploy/main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>

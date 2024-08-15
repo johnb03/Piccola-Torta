@@ -1,17 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./deploy/src/**/*.html",
-    "./deploy/html/**.html",
-    "./deploy/**.html",
-    "index.html",
-    "js",
-    "home.html",
-    "blog.html",
-    "cotizador.html",
-    "app.js",
-    "index.js",
-    "menu.html",
+    "./deploy/**/*.{html, js}",
   ],
   theme: {
     fontFamily: {
@@ -21,6 +11,7 @@ module.exports = {
       
       colors: {
         primaryColor: "#09595D",
+        primaryColorLight:"#1b7e7f",
         secondDaryColor: "#FFBD4A",
         BlackLight: "#313131",
         whiteD: "#F9F9F9",
@@ -28,8 +19,7 @@ module.exports = {
     },
     backgroundImage: {
       gradientBackG: "linear-gradient(90deg, #313131,#1B7E7F)",
-      heroBackground: "url('/deploy/public/image/hero-image.png') ",
-      imageDivBG: "url(/deploy/public/image/picaderas.jpg)",
+      
       
     },
   },
