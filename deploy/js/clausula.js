@@ -29,7 +29,7 @@ const Queue = Swal.mixin({
   })
 
   EnviarWhatsapp()
-  window.location.href = window.location.href= "/deploy/index.html";
+  window.location.href = window.location.href= "./index.html";
   
 })()
 }

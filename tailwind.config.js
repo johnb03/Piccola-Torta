@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./deploy/**/*.{html, js}",
+    
   ],
   theme: {
     fontFamily: {

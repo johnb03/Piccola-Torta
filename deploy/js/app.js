@@ -229,7 +229,7 @@ let miniSandwich = new bocadillos(
 let miniWraps = new bocadillos(
   "./public/image/imagenes de Productos/mini-wraps.jpg",
   "Mini",
-  "Sandwich",
+  "Wraps",
   25
 );
 
@@ -301,11 +301,12 @@ btn_adelante2.addEventListener("click", (e) => {
   let r3 = document.getElementById("r3").checked;
   let r4 = document.getElementById("r4").checked;
   let r6 = document.getElementById("r6").checked;
+cantPersonas= Number(cantPersonas)
 
-  if(cantPersonas <= "5"){
+  if(cantPersonas < 6 || cantPersonas >1000){
     document.getElementById("error-personas").innerHTML =
     "*6 personas en adelante😗*";
-  } else if (cantPersonas == "0") {
+  } else if (cantPersonas == 0 ) {
     document.getElementById("error-personas").innerHTML =
       "*Debes rellenarlo todo😗*";
   } else if (r1 == false && r2 == false && r6 == false) {

@@ -34,6 +34,18 @@ body.swal2-shown > [aria-hidden='true'] {
   filter: blur(3px);
 }
 
+.cardItem{
+max-width: 8rem;
+aspect-ratio: 1/1;
+border-radius: 0.5rem;
+box-shadow: 0 30px 50px -35px rgba(0,0,0,0.5);
+touch-action: auto;
+
+}
+
+.cardItem:hover{
+ cursor: pointer;
+}
 
 
 
@@ -205,8 +217,9 @@ body.swal2-shown > [aria-hidden='true'] {
     @apply absolute top-0 left-0 w-40 h-[100vh] bg-[#FFBD4A] flex flex-col justify-center gap-6 text-black  font-semibold;
   }
 
-  .cardItem {
-    @apply max-w-32 aspect-square rounded-lg shadow-[0_30px_50px_-35px_rgba(0,0,0,0.5)] mb-3  hover:cursor-pointer touch-auto;
+
+  .inputCard{
+    @apply  item-select border-blue-500  w-[18px]
   }
 
   .itemMenu {
