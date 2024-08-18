@@ -895,6 +895,11 @@ p {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-\[\.7rem\] {
   font-size: .7rem;
 }
@@ -953,6 +958,11 @@ p {
 .text-primaryColor {
   --tw-text-opacity: 1;
   color: rgb(9 89 93 / var(--tw-text-opacity));
+}
+
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
 }
 
 .text-secondDaryColor {

@@ -117,7 +117,7 @@ class bocadillos {
     this.precio = precio;
     this.info = `
     
-    <img class="cardItem" src="${imagen}">
+    <img class="cardItem" src="${imagen}" alt="${nombre}  ${subProducto}" aria-label=" ${nombre}  ${subProducto}" >
     <div>
     <h5 class="font-bold">${nombre}</h5>
     <p class="text-gray-400">${subProducto}</p>
@@ -192,7 +192,7 @@ let pastelitosPollo = new bocadillos(
 );
 
 let bolitasDeYuca = new bocadillos(
-  "./public/image/imagenes de Productos/Bolitas-de-yuca.jpg",
+  "./public/image/imagenes de Productos/bolitas-de-yuca.jpg",
   "Bolitas",
   "de yuca",
   25

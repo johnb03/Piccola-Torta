@@ -5,9 +5,10 @@
 - [Descripicion](#overview)
   - [Screenshot](#screenshot)
   - [Built with](#built-with)
+ - [Author](#author)
 
- 
-- [Author](#author)
+
+
 
 
 
@@ -18,7 +19,8 @@ esta landing esta creada para hacer que los clientes organizen con mas falicidad
 
 ### Screenshot
 
-![Landing hero](/public/desing/screen-shoot Piccola Torta.png)
+![Landing hero](/deploy/public/desing/screen-shoot%20Piccola%20Torta.png)
+![Cotizador](/deploy/public/desing/cotizador-screenshoot.png)
 
 
 
@@ -33,8 +35,9 @@ esta landing esta creada para hacer que los clientes organizen con mas falicidad
 - CSS Grid
 - Mobile-first workflow
 - [Tailwind](https://tailwindcss.com/) - CSS framework
+-[Firebase](https://firebase.google.com/?hl=es-419) - hosting & auth
 
 
 
-
-
+### Autor
+# Job Desing

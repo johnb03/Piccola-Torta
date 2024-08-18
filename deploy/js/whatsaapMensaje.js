@@ -13,7 +13,7 @@ export function EnviarWhatsapp(){
      + resultadoEnvase +" " + "%20 "
      + resultadoVocadillos +" " + "%20 "
      + resultadoTotal;
-    // return url;
+   
 
     window.open(url, '_blank').focus();
 }

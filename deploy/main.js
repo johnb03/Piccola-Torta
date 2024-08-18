@@ -10,7 +10,6 @@ import { loginCheck } from "./js/logIncheck.js";
 
 
 
-
 onAuthStateChanged(auth, async (user) => {
  if (user) {
   loginCheck(user);
