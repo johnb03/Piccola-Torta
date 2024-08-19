@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-import {analytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js"
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js"
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
