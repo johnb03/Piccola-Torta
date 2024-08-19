@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import {analytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js"
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,7 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+export const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 
 
